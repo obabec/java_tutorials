@@ -1,6 +1,8 @@
 package com.redhat;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Server
@@ -31,7 +33,8 @@ public class Server
         listServers.forEach(s -> System.out.println(s.toString()));
         listServers.removeIf(s -> s.getUrl().contains("s"));
         listServers.forEach(s -> System.out.println(s.toString()));
-        
+
+
     }
 
     @Override
