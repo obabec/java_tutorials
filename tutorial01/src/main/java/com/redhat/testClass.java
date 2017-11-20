@@ -10,8 +10,8 @@ public class testClass extends Main
 
     public static void main(String[] args)
     {
-    testClass test = new testClass();
-    test.sayHello();
+        testClass test = new testClass();
+        test.sayHello();
     }
 
 }
