@@ -29,7 +29,9 @@ public class Server
         listServers.add(new Server("www.howtofixit.com"));
 
         listServers.forEach(s -> System.out.println(s.toString()));
-
+        listServers.removeIf(s -> s.getUrl().contains("s"));
+        listServers.forEach(s -> System.out.println(s.toString()));
+        
     }
 
     @Override
