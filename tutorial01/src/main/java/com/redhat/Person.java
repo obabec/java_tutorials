@@ -2,7 +2,8 @@ package com.redhat;
 
 
 
-public class Person {
+public class Person
+{
 
     String firstName;
     String secondName;
@@ -18,35 +19,43 @@ public class Person {
 
     }
 
-    public String getFirstName() {
+    public String getFirstName()
+    {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName)
+    {
         this.firstName = firstName;
     }
 
-    public String getSecondName() {
+    public String getSecondName()
+    {
         return secondName;
     }
 
-    public void setSecondName(String secondName) {
+    public void setSecondName(String secondName)
+    {
         this.secondName = secondName;
     }
 
-    public int getAge() {
+    public int getAge()
+    {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age)
+    {
         this.age = age;
     }
 
-    public Address getAddress() {
+    public Address getAddress()
+    {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(Address address)
+    {
         this.address = address;
     }
 
