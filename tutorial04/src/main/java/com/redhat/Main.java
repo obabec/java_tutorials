@@ -1,22 +1,40 @@
 package com.redhat;
 
-import java.util.logging.ConsoleHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.logging.*;
 
 public class Main {
 
-    private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     public static void main(String[] args)
     {
-    LOGGER.setLevel(Level.SEVERE);
-    ConsoleHandler handler = new ConsoleHandler();
-    handler.setFormatter(new SimpleFormatter());
-    LOGGER.addHandler(handler);
-    handler.setLevel(Level.ALL);
-    LOGGER.fine("WARNING DO NOT ENTER!");
+        Logger log = Logger.getLogger("myLogger");
+
+        log.setLevel(Level.ALL);
+        ConsoleHandler handler = new ConsoleHandler();
+        handler.setFormatter(new SimpleFormatter());
+        handler.setLevel(Level.INFO);
+        log.addHandler(handler);
+        //log.info("hello world");
+
+        try
+        {
+            FileHandler fh = new FileHandler("logs.txt");
+            log.addHandler(fh);
+            SimpleFormatter formatter = new SimpleFormatter();
+            fh.setFormatter(formatter);
+            fh.setLevel(Level.WARNING);
+
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        log.warning("What the hell is going on!!!");
+
+        log.warning("Nothing");
+
 
     }
 }

@@ -1,0 +1,4 @@
+Nov 21, 2017 3:50:03 PM com.redhat.Main main
+WARNING: What the hell is going on!!!
+Nov 21, 2017 3:50:03 PM com.redhat.Main main
+WARNING: Nothing
