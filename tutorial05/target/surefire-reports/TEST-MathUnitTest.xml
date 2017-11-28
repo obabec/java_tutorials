@@ -1,65 +1,63 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="MathUnitTest" time="0.007" errors="0" skipped="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="MathUnitTest" time="0.022" tests="2" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="idea.version" value="2017.2.5"/>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="java.vm.version" value="9.0.1+11"/>
-    <property name="sun.boot.library.path" value="/usr/java/jdk-9.0.1/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/obabec/Documents/tutorials/java_tutorials/tutorial05"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="path.separator" value=":"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="sun.os.patch.level" value="unknown"/>
-    <property name="user.country" value="US"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/obabec/Documents/tutorials/java_tutorials/tutorial05"/>
-    <property name="java.vm.compressedOopsMode" value="32-bit"/>
-    <property name="java.runtime.version" value="9.0.1+11"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="line.separator" value="
-"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/obabec/Documents/idea-IU-172.4343.14/plugins/maven/lib/maven3/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/home/obabec/Documents/idea-IU-172.4343.14/bin::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="53.0"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="4.13.13-200.fc26.x86_64"/>
-    <property name="user.home" value="/home/obabec"/>
-    <property name="user.timezone" value="Europe/Prague"/>
-    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="file.encoding" value="UTF-8"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="9"/>
-    <property name="user.name" value="obabec"/>
-    <property name="java.class.path" value="/home/obabec/Documents/idea-IU-172.4343.14/plugins/maven/lib/maven3/boot/plexus-classworlds-2.5.2.jar"/>
-    <property name="java.vm.specification.version" value="9"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/obabec/Documents/tutorials/java_tutorials/tutorial05/target/test-classes:/home/obabec/Documents/tutorials/java_tutorials/tutorial05/target/classes:/home/obabec/.m2/repository/junit/junit/4.8.1/junit-4.8.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2017.2.5 test"/>
-    <property name="java.home" value="/usr/java/jdk-9.0.1"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="9"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/java/jdk-9.0.1/lib"/>
+    <property name="sun.java.command" value="/home/obabec/Documents/tutorials/java_tutorials/tutorial05/target/surefire/surefirebooter1288195255471588880.jar /home/obabec/Documents/tutorials/java_tutorials/tutorial05/target/surefire 2017-11-28T12-36-16_662-jvmRun1 surefire12321220961952614503tmp surefire_04804062478428200950tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/obabec/Documents/tutorials/java_tutorials/tutorial05/target/test-classes:/home/obabec/Documents/tutorials/java_tutorials/tutorial05/target/classes:/home/obabec/.m2/repository/junit/junit/4.8.1/junit-4.8.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/obabec"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
-    <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="9.0.1"/>
-    <property name="securerandom.source" value="file:/dev/./urandom"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/home/obabec/Documents/idea-IU-172.4343.14/plugins/maven/lib/maven3"/>
+    <property name="java.home" value="/usr/java/jdk-9.0.1"/>
     <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/obabec/Documents/tutorials/java_tutorials/tutorial05"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/obabec/Documents/tutorials/java_tutorials/tutorial05/target/surefire/surefirebooter1288195255471588880.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="9.0.1+11"/>
+    <property name="user.name" value="obabec"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="4.13.13-200.fc26.x86_64"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/obabec/.m2/repository"/>
     <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="idea.version" value="2017.2.5"/>
+    <property name="java.version" value="9.0.1"/>
+    <property name="user.dir" value="/home/obabec/Documents/tutorials/java_tutorials/tutorial05"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/home/obabec/Documents/idea-IU-172.4343.14/bin::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="9.0.1+11"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.desktop" value="gnome"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property name="java.class.version" value="53.0"/>
   </properties>
-  <testcase classname="MathUnitTest" name="testMultiply" time="0.006"/>
-  <testcase classname="MathUnitTest" name="testExecption" time="0.001"/>
+  <testcase name="testMultiply" classname="MathUnitTest" time="0.002"/>
+  <testcase name="testExecption" classname="MathUnitTest" time="0.005"/>
 </testsuite>
