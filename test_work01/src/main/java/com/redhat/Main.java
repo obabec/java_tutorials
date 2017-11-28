@@ -10,16 +10,20 @@ public class Main
     public static List<Integer> numbersToSort = new ArrayList<>();
 
 
-    public static void main(String args[])
-    {
-        Integer[] a = new Integer[args.length];
+    public static void main(String args[]) {
+        //Integer[] a = new Integer[args.length];
 
         for (int i = 0; i < args.length; i++)
         {
-            a[i] = Integer.parseInt(args[i]);
+            if (tryParse(args[i]))
+            {
+                numbersToSort.add(Integer.parseInt(args[i]));
+            }
+
+
         }
 
-      numbersToSort = Arrays.asList(a);
+
         bubble();
     }
 
@@ -42,5 +46,18 @@ public class Main
         }
 
         numbersToSort.forEach(System.out::println);
+    }
+    public static boolean tryParse(String input)
+    {
+        try
+        {
+            Integer.parseInt(input);
+            return true;
+        }
+            catch (NumberFormatException e)
+        {
+            return false;
+        }
+
     }
 }
