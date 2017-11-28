@@ -19,7 +19,7 @@ public class MathUnitTest
 
 
 
-    @Test()
+    @Test(expected = IllegalArgumentException.class)
     public void testExecption()
     {
        assertEquals("2k exp",2000,SimpleMath.multiply(1000,2),0);
