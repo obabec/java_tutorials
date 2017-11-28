@@ -16,11 +16,19 @@ public class MathUnitTest
     {
         System.out.println("TEST FOR MULTIPLY");
     }
-    @After
-    public void afterEchTest()
+
+
+
+    @Test()
+    public void testExecption()
     {
-    System.out.println("TEST COMPLETED");
+       assertEquals("2k exp",2000,SimpleMath.multiply(1000,2),0);
+
     }
+
+
+
+
     @Test
     public void testMultiply()
     {
@@ -30,4 +38,9 @@ public class MathUnitTest
 
     }
 
+    @After
+    public void afterEchTest()
+    {
+        System.out.println("TEST COMPLETED");
+    }
 }
