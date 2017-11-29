@@ -26,8 +26,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,11 +38,9 @@
       <file leaf-file-name="bubbleTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/bubbleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -325,17 +323,44 @@
       <updated>1511869559850</updated>
       <workItem from="1511869566564" duration="68000" />
       <workItem from="1511875568729" duration="3273000" />
-      <workItem from="1511947316274" duration="2991000" />
+      <workItem from="1511947316274" duration="5558000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="bubbleTest - 2017.11.29 at 11h 10m 23s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 07m 03s.xml">
+      <configuration name="bubbleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 07m 19s.xml">
+      <configuration name="bubbleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 08m 27s.xml">
+      <configuration name="bubbleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 11m 21s.xml">
+      <configuration name="bubbleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 11m 39s.xml">
+      <configuration name="bubbleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 12m 38s.xml">
+      <configuration name="bubbleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 12m 49s.xml">
+      <configuration name="bubbleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 13m 06s.xml">
+      <configuration name="bubbleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 13m 28s.xml">
+      <configuration name="bubbleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 13m 34s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6332000" />
+    <option name="totallyTimeSpent" value="8899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="16" width="1920" height="1034" extended-state="0" />
@@ -350,7 +375,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -411,8 +436,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -421,11 +446,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/bubbleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -32,7 +32,7 @@ public class Main
         {
             for(int y=0;y<numbersToSort.size();y++)
             {
-                    if (numbersToSort.get(x)>numbersToSort.get(y))
+                    if (numbersToSort.get(x)<numbersToSort.get(y))
                     {
                         transfer = numbersToSort.get(x);
                         numbersToSort.set(x, numbersToSort.get(y));
@@ -41,7 +41,7 @@ public class Main
             }
         }
 
-        numbersToSort.forEach(System.out::println);
+
     }
     public static boolean tryParse(String input)
     {

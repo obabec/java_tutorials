@@ -10,6 +10,7 @@ import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+import java.util.stream.Collectors;
 
 public class bubbleTest
 {
@@ -35,20 +36,14 @@ public class bubbleTest
         for (int i=0;i<5;i++)
         {
             numbersToSort.add(rand.nextInt());
-            //System.out.println(numbersToSort.get(i));
         }
 
-        Main.numbersToSort = numbersToSort;
+        Main.numbersToSort = numbersToSort.stream().collect(Collectors.toList());
         Main.bubble();
 
-        for (int i=0;i<5;i++)
-        {
-            log.fine(String.valueOf(Main.numbersToSort.get(i)));
-        }
         Collections.sort(numbersToSort);
-        System.out.println("XXXXXXXXXXXXXXXXXX");
-        numbersToSort.forEach(System.out::println);
-        assertEquals(numbersToSort,Main.numbersToSort);
+
+        assertEquals(true,Main.numbersToSort.equals(numbersToSort));
 
     }
 
