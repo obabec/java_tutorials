@@ -19,11 +19,7 @@ public class Main
             {
                 numbersToSort.add(Integer.parseInt(args[i]));
             }
-
-
         }
-
-
         bubble();
     }
 
