@@ -40,6 +40,7 @@ public class Main
                     }
             }
         }
+        numbersToSort.forEach(System.out::println);
 
 
     }
