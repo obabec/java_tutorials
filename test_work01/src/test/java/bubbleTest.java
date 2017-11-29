@@ -33,7 +33,9 @@ public class bubbleTest
         Random rand = new Random();
         List<Integer> numbersToSort= new ArrayList<>();
 
-        for (int i=0;i<5;i++)
+
+
+        for (int i=0;i<rand.nextInt(Integer.SIZE-1);i++)
         {
             numbersToSort.add(rand.nextInt());
         }

@@ -23,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+            <state relative-caret-position="285">
+              <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,12 +35,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bubbleTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bubbleTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/bubbleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="201">
+              <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,8 +65,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/redhat/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/bubbleTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redhat/Main.java" />
       </list>
     </option>
   </component>
@@ -323,44 +325,44 @@
       <updated>1511869559850</updated>
       <workItem from="1511869566564" duration="68000" />
       <workItem from="1511875568729" duration="3273000" />
-      <workItem from="1511947316274" duration="5558000" />
+      <workItem from="1511947316274" duration="6466000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="bubbleTest - 2017.11.29 at 14h 07m 03s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 17m 47s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="bubbleTest - 2017.11.29 at 14h 07m 19s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 18m 47s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="bubbleTest - 2017.11.29 at 14h 08m 27s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 20m 55s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="bubbleTest - 2017.11.29 at 14h 11m 21s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 21m 09s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="bubbleTest - 2017.11.29 at 14h 11m 39s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 23m 01s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="bubbleTest - 2017.11.29 at 14h 12m 38s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 23m 15s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="bubbleTest - 2017.11.29 at 14h 12m 49s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 23m 33s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="bubbleTest - 2017.11.29 at 14h 13m 06s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 23m 42s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="bubbleTest - 2017.11.29 at 14h 13m 28s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 29m 15s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="bubbleTest - 2017.11.29 at 14h 13m 34s.xml">
+    <history-entry file="bubbleTest - 2017.11.29 at 14h 29m 31s.xml">
       <configuration name="bubbleTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8899000" />
+    <option name="totallyTimeSpent" value="9807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="16" width="1920" height="1034" extended-state="0" />
@@ -434,21 +436,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/bubbleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+        <state relative-caret-position="201">
+          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bubbleTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="285">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
