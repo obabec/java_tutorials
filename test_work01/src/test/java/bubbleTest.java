@@ -30,6 +30,7 @@ public class bubbleTest
     @Test
     public void bubbleTestInt()
     {
+        Main.numbersToSort.clear();
         Random rand = new Random();
         List<Integer> numbersToSort= new ArrayList<>();
 
@@ -46,6 +47,46 @@ public class bubbleTest
         Collections.sort(numbersToSort);
 
         assertEquals(true,Main.numbersToSort.equals(numbersToSort));
+
+    }
+
+    @Test
+    public void oneNumberTest()
+    {
+        Main.numbersToSort.clear();
+        Random rand = new Random();
+        int numero = rand.nextInt();
+        log.warning(Integer.toString(numero));
+        Main.numbersToSort.add(numero);
+        Main.bubble();
+        log.warning(Integer.toString(Main.numbersToSort.get(0)));
+
+        assertEquals(numero,Main.numbersToSort.get(0),0);
+    }
+
+    @Test
+    public void reverseListTest()
+    {
+        Main.numbersToSort.clear();
+        List<Integer> listerino = new ArrayList<>();
+        for (int i=5;i>0;i--)
+        {
+            listerino.add(i);
+        }
+        Main.numbersToSort = listerino.stream().collect(Collectors.toList());
+        Collections.sort(listerino);
+        Main.bubble();
+
+        assertEquals(true,listerino.equals(Main.numbersToSort));
+    }
+
+    @Test
+    public void emptyListTest()
+    {
+        Main.numbersToSort.clear();
+        List<Integer> listerino = new ArrayList<>();
+        Main.numbersToSort = listerino.stream().collect(Collectors.toList());
+        assertEquals(listerino,Main.numbersToSort);
 
     }
 
