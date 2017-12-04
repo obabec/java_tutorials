@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 public class bubbleTest
 {
-    Logger log = Logger.getLogger("MyLogger");
+    /*Logger log = Logger.getLogger("MyLogger");
     ConsoleHandler cHand = new ConsoleHandler();
 
 
@@ -98,7 +98,7 @@ public class bubbleTest
         cHand.setLevel(Level.ALL);
         log.addHandler(cHand);
         log.info("Ending test!");
-    }
+    }*/
 
 
 

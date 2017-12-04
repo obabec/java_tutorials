@@ -78,23 +78,35 @@ public class SortClass {
             if (i == 0)
             {
                 mySortedList.add(integerIterator.next());
-                integerIterator.remove();
+
             }
             else
             {
-                if (mySortedList.get(0)>integerIterator.next())
-                {
-                    Collections.reverse(mySortedList);
-                    mySortedList.add(integerIterator.next());
-                    Collections.reverse(mySortedList);
-                    integerIterator.remove();
+                int pom = integerIterator.next();
+                int j = i - 1 ;
 
+                while ((j>=0)&&mySortedList.get(j)>pom)
+                {
+                    if (mySortedList.size()<=j+1)
+                    {
+                        mySortedList.add(j+1,mySortedList.get(j));
+                    }
+                    else
+                    {
+                        mySortedList.set(j+1,mySortedList.get(j));
+                    }
+
+                    j--;
+                }
+                if (mySortedList.size()>j+1)
+                {
+                    mySortedList.set(j+1,pom);
                 }
                 else
                 {
-                    mySortedList.add(integerIterator.next());
-                    integerIterator.remove();
+                    mySortedList.add(j+1,pom);
                 }
+
 
             }
 
