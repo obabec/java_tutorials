@@ -1,49 +1,41 @@
 package com.redhat;
 
-import javax.swing.text.html.parser.Parser;
+import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class Main
 {
-    public static List<Integer> numbersToSort = new ArrayList<>();
+    public static Collection<Integer> numbersToSort = new ArrayList<>();
+
+    public static SortClass sorter = new SortClass();
 
 
     public static void main(String args[]) {
-        //Integer[] a = new Integer[args.length];
 
-        for (int i = 0; i < args.length; i++)
+        List<Integer> listerino = new ArrayList<>();
+        /**for (int i = 0; i < args.length; i++)
         {
             if (tryParse(args[i]))
             {
                 numbersToSort.add(Integer.parseInt(args[i]));
             }
-        }
-        bubble();
+        }*/
+        numbersToSort.add(50);
+        numbersToSort.add(2);
+        numbersToSort.add(5);
+        numbersToSort.add(180);
+        numbersToSort.add(120);
+
+
+        listerino = sorter.BubbleSort(numbersToSort);
+        listerino = sorter.SelectSort(numbersToSort);
     }
 
 
 
-    public static void bubble()
-    {
-        int transfer = 0;
-        for(int x = 0;x<numbersToSort.size();x++)
-        {
-            for(int y=0;y<numbersToSort.size();y++)
-            {
-                    if (numbersToSort.get(x)<numbersToSort.get(y))
-                    {
-                        transfer = numbersToSort.get(x);
-                        numbersToSort.set(x, numbersToSort.get(y));
-                        numbersToSort.set(y, transfer);
-                    }
-            }
-        }
-        numbersToSort.forEach(System.out::println);
 
-
-    }
     public static boolean tryParse(String input)
     {
         try
