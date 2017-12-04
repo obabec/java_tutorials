@@ -9,7 +9,7 @@ public class SortClass {
 
     public List<Integer> BubbleSort(Collection collection)
     {
-        List<Integer> mySortedList = new ArrayList<>();
+        List<Integer> mySortedList;
 
         mySortedList = (List<Integer>) collection.stream().collect(Collectors.toList());
 
@@ -35,7 +35,7 @@ public class SortClass {
     public List<Integer> SelectSort(Collection collection)
     {
 
-        List<Integer> mySortedList = new ArrayList<>();
+        List<Integer> mySortedList;
         mySortedList = (List<Integer>) collection.stream().collect(Collectors.toList());
 
         if (mySortedList.size()>0)

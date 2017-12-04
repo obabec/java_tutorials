@@ -15,7 +15,7 @@ public class Main
     public static void main(String args[]) {
 
         List<Integer> listerino = new ArrayList<>();
-        /**for (int i = 0; i < args.length; i++)
+        /*for (int i = 0; i < args.length; i++)
         {
             if (tryParse(args[i]))
             {
@@ -29,7 +29,7 @@ public class Main
         numbersToSort.add(120);
 
 
-        //listerino = sorter.BubbleSort(numbersToSort);
+        listerino = sorter.BubbleSort(numbersToSort);
         listerino = sorter.SelectSort(numbersToSort);
     }
 
