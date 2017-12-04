@@ -1,8 +1,6 @@
 package com.redhat;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class SortClass {
@@ -72,6 +70,40 @@ public class SortClass {
     public List<Integer> InsertSort(Collection collection)
     {
         List<Integer> mySortedList = new ArrayList<>();
+        Iterator<Integer> integerIterator = collection.iterator();
+
+
+        for (int i=0;integerIterator.hasNext();i++)
+        {
+            if (i == 0)
+            {
+                mySortedList.add(integerIterator.next());
+                integerIterator.remove();
+            }
+            else
+            {
+                if (mySortedList.get(0)>integerIterator.next())
+                {
+                    Collections.reverse(mySortedList);
+                    mySortedList.add(integerIterator.next());
+                    Collections.reverse(mySortedList);
+                    integerIterator.remove();
+
+                }
+                else
+                {
+                    mySortedList.add(integerIterator.next());
+                    integerIterator.remove();
+                }
+
+            }
+
+        }
+
+
+
+
+
 
         return mySortedList;
     }

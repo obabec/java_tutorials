@@ -29,8 +29,9 @@ public class Main
         numbersToSort.add(120);
 
 
-        listerino = sorter.BubbleSort(numbersToSort);
-        listerino = sorter.SelectSort(numbersToSort);
+        //listerino = sorter.BubbleSort(numbersToSort);
+        //listerino = sorter.SelectSort(numbersToSort);
+        listerino = sorter.InsertSort(numbersToSort);
     }
 
 
