@@ -45,14 +45,14 @@ public class SortClass {
 
             for (int i=0;i<mySortedList.size();i++)
             {
-                min = mySortedList.get(i);
+
 
                 for (int j = i+1;j<mySortedList.size();j++)
                 {
-                    if (min>mySortedList.get(j))
+                    if (mySortedList.get(i)>mySortedList.get(j))
                     {
-                        swap = min;
-                        min = mySortedList.get(j);
+                        swap = mySortedList.get(i);
+                        mySortedList.set(i,mySortedList.get(j));
                         mySortedList.set(j,swap);
                     }
                 }
