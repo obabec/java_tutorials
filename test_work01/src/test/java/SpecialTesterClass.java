@@ -1,4 +1,4 @@
-import com.redhat.SortClass;
+
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -10,9 +10,15 @@ public class SpecialTesterClass
 {
 
     public Collection collection = new ArrayList();
-    public SortClass sorter = new SortClass();
-    public List<Integer> SortedNums = new ArrayList<>();
-    private List<Integer> controlList;
+    public List<Comparable> SortedNums = new ArrayList<>();
+    private List<Comparable> controlList;
+
+    class Sorter {
+        List<? extends Comparable> sort(Collection<? extends Comparable> col) {
+            return null;
+        }
+    };
+
 
     public Boolean OneElementTest(Integer typeOfTest)
     {
@@ -20,9 +26,9 @@ public class SpecialTesterClass
         collection.clear();
         SortedNums.clear();
 
-        collection.add(1);
+        collection.add("a");
 
-        controlList = (List<Integer>) collection.stream().collect(Collectors.toList());
+        controlList = (List<Comparable>) collection.stream().collect(Collectors.toList());
         BasicSortFuncClass startSort = new BasicSortFuncClass(SortedNums,collection);
 
         startSort.StartSort(typeOfTest);
@@ -37,7 +43,7 @@ public class SpecialTesterClass
         collection.clear();
 
 
-        controlList = (List<Integer>) collection.stream().collect(Collectors.toList());
+        controlList = (List<Comparable>) collection.stream().collect(Collectors.toList());
         BasicSortFuncClass startSort = new BasicSortFuncClass(SortedNums,collection);
         startSort.StartSort(typeOfTest);
 

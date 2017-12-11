@@ -7,35 +7,39 @@ import java.util.List;
 
 public class Main
 {
-    public static Collection<Integer> numbersToSort = new ArrayList<>();
+    public static Collection<Comparable> numbersToSort = new ArrayList<>();
+    public static Collection sortedColl = new ArrayList<>();
 
-    public static SortClass sorter = new SortClass();
+
+//    public static SortClass sorter = new SortClass();
+    public static BubbleSorter bubbleSortMaker = new BubbleSorter();
+    public static InsertSorter insertSortMaker = new InsertSorter();
+    public static SelectSorter selectSortMaker = new SelectSorter();
 
 
     public static void main(String args[]) {
 
-        List<Integer> listerino;
         for (int i = 0; i < args.length; i++)
         {
-            if (tryParse(args[i]))
-            {
-                numbersToSort.add(Integer.parseInt(args[i]));
-            }
+            numbersToSort.add(args[i]);
         }
-
-        /*numbersToSort.add(5);
-        numbersToSort.add(185);
-        numbersToSort.add(66);
-        numbersToSort.add(55);
-        numbersToSort.add(99);
-        numbersToSort.add(845);
-        numbersToSort.add(155);*/
 
 
         //listerino = sorter.BubbleSort(numbersToSort);
         //listerino = sorter.SelectSort(numbersToSort);
-        listerino = sorter.InsertSort(numbersToSort);
-        listerino.forEach(System.out::println);
+        //listerino = sorter.InsertSort(numbersToSort);
+        //listerino.forEach(System.out::println);
+        /*numbersToSort.add("a");
+        numbersToSort.add("f");
+        numbersToSort.add("x");
+        numbersToSort.add("z");*/
+        sortedColl = bubbleSortMaker.sort(numbersToSort);
+        sortedColl = selectSortMaker.sort(numbersToSort);
+        /*numbersToSort.clear();
+        numbersToSort.add(80.00);
+        numbersToSort.add(62.50);
+        numbersToSort.add(71.1);*/
+        sortedColl = insertSortMaker.sort(numbersToSort);
     }
 
 

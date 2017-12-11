@@ -1,3 +1,4 @@
+/*
 package com.redhat;
 
 import java.util.*;
@@ -121,3 +122,4 @@ public class SortClass {
     }
 
 }
+*/

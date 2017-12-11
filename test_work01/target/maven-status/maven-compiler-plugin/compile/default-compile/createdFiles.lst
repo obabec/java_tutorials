@@ -1,1 +1,5 @@
+com/redhat/BasicSorter.class
+com/redhat/BubbleSorter.class
 com/redhat/Main.class
+com/redhat/SelectSorter.class
+com/redhat/InsertSorter.class

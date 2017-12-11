@@ -1,26 +1,34 @@
+import com.redhat.BubbleSorter;
+import com.redhat.InsertSorter;
+import com.redhat.SelectSorter;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static com.redhat.Main.sorter;
 
 public class BasicSortFuncClass
 {
-    public List<Integer> SortedNums = new ArrayList<>();
+    BubbleSorter bubbleSorter = new BubbleSorter();
+    SelectSorter selectSorter = new SelectSorter();
+    InsertSorter insertSorter = new InsertSorter();
+
+
+    public Collection SortedNums = new ArrayList<>();
     public Collection collection = new ArrayList();
 
-    public BasicSortFuncClass(List<Integer> sortedNums, Collection collection)
+    public BasicSortFuncClass(List<Comparable> sortedNums, Collection collection)
     {
         SortedNums = sortedNums;
         this.collection = collection;
     }
 
-    public List<Integer> getSortedNums()
+    public Collection getSortedNums()
     {
         return SortedNums;
     }
 
-    public void setSortedNums(List<Integer> sortedNums)
+    public void setSortedNums(List<Comparable> sortedNums)
     {
         SortedNums = sortedNums;
     }
@@ -40,13 +48,13 @@ public class BasicSortFuncClass
         switch (typeOfTest)
         {
             case 0:
-                SortedNums = sorter.BubbleSort(collection);
+                SortedNums = bubbleSorter.sort(collection);
                 break;
             case 1:
-                SortedNums = sorter.SelectSort(collection);
+                SortedNums = selectSorter.sort(collection);
                 break;
             default:
-                SortedNums = sorter.InsertSort(collection);
+                SortedNums = insertSorter.sort(collection);
                 break;
         }
     }

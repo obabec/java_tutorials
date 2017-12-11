@@ -1,5 +1,4 @@
 import com.redhat.Main;
-import com.redhat.SortClass;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -10,9 +9,8 @@ public class SortTesterClass
 {
 
     public Collection collection = new ArrayList();
-    public SortClass sorter = new SortClass();
-    public List<Integer> SortedNums = new ArrayList<>();
-    private List<Integer> controlList;
+    public List<Comparable> SortedNums = new ArrayList<>();
+    private List<Comparable> controlList;
 
     public Boolean RandomIntTest(Integer typeOfTest)
     {
@@ -22,7 +20,7 @@ public class SortTesterClass
         InsertToCollection();
 
 
-        controlList = (List<Integer>) collection.stream().collect(Collectors.toList());
+        controlList = (List<Comparable>) collection.stream().collect(Collectors.toList());
 
         Collections.sort(controlList);
         BasicSortFuncClass startSort = new BasicSortFuncClass(SortedNums,collection);
@@ -37,7 +35,7 @@ public class SortTesterClass
     {
         collection.clear();
         InsertToCollection();
-        controlList = (List<Integer>) collection.stream().collect(Collectors.toList());
+        controlList = (List<Comparable>) collection.stream().collect(Collectors.toList());
 
         Collections.sort(controlList);
         Collections.reverse(controlList);
