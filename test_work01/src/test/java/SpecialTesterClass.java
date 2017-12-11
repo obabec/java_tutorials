@@ -21,10 +21,12 @@ public class SpecialTesterClass {
         collection.add(1);
 
         controlList = (List<Integer>) collection.stream().collect(Collectors.toList());
-        StartSort(typeOfTest);
+        BasicSortFuncClass startSort = new BasicSortFuncClass(SortedNums,collection);
+
+        startSort.StartSort(typeOfTest);
 
         Collections.sort(controlList);
-        return controlList.equals(SortedNums);
+        return controlList.equals(startSort.getSortedNums());
 
     }
     public Boolean EmptyCollectionTest(Integer typeOfTest) {
@@ -33,14 +35,21 @@ public class SpecialTesterClass {
 
 
         controlList = (List<Integer>) collection.stream().collect(Collectors.toList());
-        StartSort(typeOfTest);
+        BasicSortFuncClass startSort = new BasicSortFuncClass(SortedNums,collection);
+        startSort.StartSort(typeOfTest);
 
         Collections.sort(controlList);
-        return controlList.equals(SortedNums);
+        return controlList.equals(startSort.getSortedNums());
 
     }
 
-    public void StartSort(Integer typeOfTest)
+
+
+
+
+
+
+    /*public void StartSort(Integer typeOfTest)
     {
         switch (typeOfTest)
         {
@@ -54,6 +63,6 @@ public class SpecialTesterClass {
                 SortedNums = sorter.InsertSort(collection);
                 break;
         }
-    }
+    }*/
 
 }

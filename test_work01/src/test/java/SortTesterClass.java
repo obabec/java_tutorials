@@ -6,7 +6,8 @@ import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 
-public class SortTesterClass {
+public class SortTesterClass
+{
 
     public Collection collection = new ArrayList();
     public SortClass sorter = new SortClass();
@@ -24,10 +25,11 @@ public class SortTesterClass {
         controlList = (List<Integer>) collection.stream().collect(Collectors.toList());
 
         Collections.sort(controlList);
-        StartSort(typeOfTest);
+        BasicSortFuncClass startSort = new BasicSortFuncClass(SortedNums,collection);
+        startSort.StartSort(typeOfTest);
 
 
-        return controlList.equals(SortedNums);
+        return controlList.equals(startSort.getSortedNums());
 
     }
 
@@ -45,11 +47,12 @@ public class SortTesterClass {
         {
             collection.add(controlList.get(i));
         }
+        BasicSortFuncClass startSort = new BasicSortFuncClass(SortedNums,collection);
 
-        StartSort(typeOfTest);
+        startSort.StartSort(typeOfTest);
 
         Collections.reverse(controlList);
-        return controlList.equals(SortedNums);
+        return controlList.equals(startSort.getSortedNums());
     }
 
     public void InsertToCollection()
@@ -62,7 +65,12 @@ public class SortTesterClass {
         }
 
     }
-    public void StartSort(Integer typeOfTest)
+
+
+
+
+
+   /* public void StartSort(Integer typeOfTest)
     {
         switch (typeOfTest)
         {
@@ -76,6 +84,6 @@ public class SortTesterClass {
                 SortedNums = sorter.InsertSort(collection);
                 break;
         }
-    }
+    }*/
 
 }
