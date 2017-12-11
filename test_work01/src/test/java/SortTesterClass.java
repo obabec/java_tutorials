@@ -66,24 +66,4 @@ public class SortTesterClass
 
     }
 
-
-
-
-
-   /* public void StartSort(Integer typeOfTest)
-    {
-        switch (typeOfTest)
-        {
-            case 0:
-                SortedNums = sorter.BubbleSort(collection);
-                break;
-            case 1:
-                SortedNums = sorter.SelectSort(collection);
-                break;
-            default:
-                SortedNums = sorter.InsertSort(collection);
-                break;
-        }
-    }*/
-
 }

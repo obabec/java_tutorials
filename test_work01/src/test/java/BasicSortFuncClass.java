@@ -4,7 +4,8 @@ import java.util.List;
 
 import static com.redhat.Main.sorter;
 
-public class BasicSortFuncClass {
+public class BasicSortFuncClass
+{
     public List<Integer> SortedNums = new ArrayList<>();
     public Collection collection = new ArrayList();
 
@@ -14,19 +15,23 @@ public class BasicSortFuncClass {
         this.collection = collection;
     }
 
-    public List<Integer> getSortedNums() {
+    public List<Integer> getSortedNums()
+    {
         return SortedNums;
     }
 
-    public void setSortedNums(List<Integer> sortedNums) {
+    public void setSortedNums(List<Integer> sortedNums)
+    {
         SortedNums = sortedNums;
     }
 
-    public Collection getCollection() {
+    public Collection getCollection()
+    {
         return collection;
     }
 
-    public void setCollection(Collection collection) {
+    public void setCollection(Collection collection)
+    {
         this.collection = collection;
     }
 

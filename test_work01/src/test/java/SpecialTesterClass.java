@@ -6,14 +6,16 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SpecialTesterClass {
+public class SpecialTesterClass
+{
 
     public Collection collection = new ArrayList();
     public SortClass sorter = new SortClass();
     public List<Integer> SortedNums = new ArrayList<>();
     private List<Integer> controlList;
 
-    public Boolean OneElementTest(Integer typeOfTest) {
+    public Boolean OneElementTest(Integer typeOfTest)
+    {
 
         collection.clear();
         SortedNums.clear();
@@ -29,6 +31,7 @@ public class SpecialTesterClass {
         return controlList.equals(startSort.getSortedNums());
 
     }
+
     public Boolean EmptyCollectionTest(Integer typeOfTest) {
         SortedNums.clear();
         collection.clear();
@@ -43,26 +46,5 @@ public class SpecialTesterClass {
 
     }
 
-
-
-
-
-
-
-    /*public void StartSort(Integer typeOfTest)
-    {
-        switch (typeOfTest)
-        {
-            case 0:
-                SortedNums = sorter.BubbleSort(collection);
-                break;
-            case 1:
-                SortedNums = sorter.SelectSort(collection);
-                break;
-            default:
-                SortedNums = sorter.InsertSort(collection);
-                break;
-        }
-    }*/
 
 }
