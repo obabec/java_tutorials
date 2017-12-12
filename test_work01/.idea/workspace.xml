@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db7c3023-b3f2-4fc1-aaed-1622b11f30b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redhat/BubbleSorter.java" afterPath="$PROJECT_DIR$/src/main/java/com/redhat/BubbleSorter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tutorial01/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../tutorial01/.idea/workspace.xml" />
@@ -90,8 +89,8 @@
       <file leaf-file-name="BubbleSorter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/BubbleSorter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="199">
+              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,6 +157,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="obabec" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
@@ -460,8 +464,16 @@
       <workItem from="1512999554434" duration="1618000" />
       <workItem from="1513012916575" duration="4985000" />
       <workItem from="1513019353014" duration="8768000" />
-      <workItem from="1513078273173" duration="631000" />
+      <workItem from="1513078273173" duration="896000" />
     </task>
+    <task id="LOCAL-00001" summary="Maybe it' s right">
+      <created>1513078984402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1513078984402</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -497,7 +509,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53055000" />
+    <option name="totallyTimeSpent" value="53320000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -577,6 +589,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Maybe it' s right" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maybe it' s right" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1070,8 +1086,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/BubbleSorter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="199">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
