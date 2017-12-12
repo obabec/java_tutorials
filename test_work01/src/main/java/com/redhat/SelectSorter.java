@@ -5,42 +5,35 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SelectSorter implements BasicSorter {
+public class SelectSorter <T extends Comparable<T>> implements BasicSorter {
+
+    public List<T> mySortedList;
+
     @Override
-    public Collection sort(Collection<Comparable> collection)
+    public List sort(Collection collection)
     {
-        List<Comparable> mySortedList;
-        mySortedList = collection.stream().collect(Collectors.toList());
+        mySortedList = (List<T>) collection.stream().collect(Collectors.toList());
 
         if (mySortedList.size()>0)
         {
-            Comparable min = 0;
-            Comparable swap = 0;
+            T min;
+            T swap;
 
             for (int i=0;i<mySortedList.size();i++)
             {
-
+                min = mySortedList.get(i);
 
                 for (int j = i+1;j<mySortedList.size();j++)
                 {
-                    if (1 == mySortedList.get(i).compareTo(mySortedList.get(j)))
+                    if (0 > mySortedList.get(i).compareTo(mySortedList.get(j)))
                     {
-                        swap = mySortedList.get(i);
-                        mySortedList.set(i,mySortedList.get(j));
-                        mySortedList.set(j,swap);
+                        min = mySortedList.get(j);
                     }
                 }
 
             }
         }
-
-
-
-
-
-
         return mySortedList;
-
 
     }
 }

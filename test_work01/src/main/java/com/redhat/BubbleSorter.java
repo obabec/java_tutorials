@@ -19,7 +19,7 @@ public class BubbleSorter <T extends Comparable<T>> implements BasicSorter {
 
             for(int y=1+x;y<mySortedList.size();y++)
             {
-                if (1 == mySortedList.get(y).compareTo(mySortedList.get(x)))
+                if (0 < mySortedList.get(x).compareTo(mySortedList.get(y)))
                 {
                     transfer =  mySortedList.get(x);
                     mySortedList.set(x, mySortedList.get(y));
