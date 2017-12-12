@@ -5,9 +5,10 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-public class InsertSorter implements BasicSorter {
+public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
+
     @Override
-    public Collection sort(Collection<Comparable> collection)
+    public List sort(Collection collection)
     {
 
 
@@ -60,6 +61,5 @@ public class InsertSorter implements BasicSorter {
 
 
         return mySortedList;
-
     }
 }

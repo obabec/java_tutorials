@@ -30,17 +30,19 @@ public class Main
             numbersToSort.add(args[i]);
         }
 
-
-        /*numbersToSort.add("a");
-        numbersToSort.add("f");
+        numbersToSort.add("z");
+        numbersToSort.add("a");
         numbersToSort.add("x");
-        numbersToSort.add("z");*/
-        sortedColl = bubbleSortMaker.sort(toSort);
+        numbersToSort.add("f");
+
+
         sortedColl = selectSortMaker.sort(numbersToSort);
-        /*numbersToSort.clear();
+
+        numbersToSort.clear();
         numbersToSort.add(80.00);
         numbersToSort.add(62.50);
-        numbersToSort.add(71.1);*/
+        numbersToSort.add(71.1);
+        sortedColl = bubbleSortMaker.sort(numbersToSort);
         sortedColl = insertSortMaker.sort(numbersToSort);
     }
 
