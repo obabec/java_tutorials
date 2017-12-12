@@ -1,5 +1,6 @@
 package com.redhat;
 
+
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -7,25 +8,27 @@ import java.util.stream.Collectors;
 public class BubbleSorter implements BasicSorter {
 
     @Override
-    public Collection<Comparable> sort(Collection<Comparable> collection) {
-        List<Comparable> mySortedList;
+    public List sort(Collection collection)
+    {
+        List<? extends Comparable> mySortedList;
 
-        mySortedList = collection.stream().collect(Collectors.toList());
+        mySortedList = (List<? extends Comparable>) collection.stream().collect(Collectors.toList());
 
-        Comparable transfer = 0;
-        for(int x = 0;x<mySortedList.size();x++)
+        Comparable transfer;
+        for(int x = 0;x<mySortedList.size()-1;x++)
         {
-            for(int y=0;y<mySortedList.size();y++)
+
+            for(int y=1+x;y<mySortedList.size();y++)
             {
-                if (1 == mySortedList.get(y).compareTo(mySortedList.get(x)))
+                if (mySortedList.get(x).mySortedList.get(y))
                 {
-                    transfer = mySortedList.get(x);
+                    transfer = (Comparable) mySortedList.get(x);
                     mySortedList.set(x, mySortedList.get(y));
-                    mySortedList.set(y, transfer);
+                    mySortedList.set(y, );
+
                 }
             }
         }
-
 
         return mySortedList;
     }
