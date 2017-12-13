@@ -30,13 +30,16 @@ public class Main
             numbersToSort.add(args[i]);
         }
 
-        numbersToSort.add("z");
-        numbersToSort.add("a");
-        numbersToSort.add("x");
-        numbersToSort.add("f");
+        List<String> wtfSorte = new ArrayList<>();
 
 
-        sortedColl = selectSortMaker.sort(numbersToSort);
+        wtfSorte.add("z");
+        wtfSorte.add("a");
+        wtfSorte.add("x");
+        wtfSorte.add("f");
+
+
+        sortedColl = selectSortMaker.sort(wtfSorte);
 
         numbersToSort.clear();
         numbersToSort.add(80.00);
