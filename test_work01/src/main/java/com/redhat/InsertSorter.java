@@ -12,8 +12,8 @@ public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
     {
 
 
-        List<Comparable> mySortedList = new ArrayList<>();
-        Iterator<Comparable> integerIterator = collection.iterator();
+        List<T> mySortedList = new ArrayList<>();
+        Iterator<T> integerIterator = collection.iterator();
 
 
         for (int i=0;integerIterator.hasNext();i++)
@@ -25,10 +25,10 @@ public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
             }
             else
             {
-                Comparable pom = integerIterator.next();
+                T pom = integerIterator.next();
                 int j = i - 1 ;
 
-                while ((j>=0)&&(1 ==mySortedList.get(j).compareTo(pom)))
+                while ((j>=0)&&( 0 < mySortedList.get(j).compareTo(pom)))
                 {
                     if (mySortedList.size()<=j+1)
                     {

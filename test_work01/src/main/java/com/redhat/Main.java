@@ -45,8 +45,9 @@ public class Main
         numbersToSort.add(80.00);
         numbersToSort.add(62.50);
         numbersToSort.add(71.1);
-        sortedColl = bubbleSortMaker.sort(numbersToSort);
-        sortedColl = insertSortMaker.sort(numbersToSort);
+        //sortedColl = bubbleSortMaker.sort(numbersToSort);
+        sortedColl.clear();
+        sortedColl = insertSortMaker.sort(wtfSorte);
     }
 
 
