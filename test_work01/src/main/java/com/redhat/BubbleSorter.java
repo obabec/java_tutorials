@@ -12,6 +12,7 @@ public class BubbleSorter <T extends Comparable<T>> implements BasicSorter {
     @Override
     public List sort(Collection collection)
     {
+
         mySortedList = (List<T>) collection.stream().collect(Collectors.toList());
         T transfer;
         for(int x = 0;x<mySortedList.size()-1;x++)

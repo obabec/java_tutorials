@@ -55,11 +55,6 @@ public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
 
         }
 
-
-
-
-
-
         return mySortedList;
     }
 }
