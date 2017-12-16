@@ -1,5 +1,6 @@
 package com.redhat;
 
+import java.io.*;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,19 +14,61 @@ public class Main
     public static InsertSorter insertSortMaker = new InsertSorter();
     public static SelectSorter selectSortMaker = new SelectSorter();
 
+    Boolean inputSwitch = false;
+
     public static void main(String args[])
     {
 
 
-
-        for (int i = 0; i < args.length; i++)
+        if (args[0].equals("f"))
         {
-            numbersToSort.add(args[i]);
+
+            try
+            {
+                File fileWithContent = new File(args[1]);
+
+
+                FileReader fileReader = new FileReader(fileWithContent);
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+                StringBuffer stringBuffer = new StringBuffer();
+                String line;
+
+                while ((line = bufferedReader.readLine()) != null)
+                {
+				numbersToSort.add(Integer.parseInt(line));
+			    }
+
+
+            }
+            catch (FileNotFoundException e)
+            {
+                e.printStackTrace();
+                System.out.println("Soubor nenalezen");
+
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+
+
         }
 
-        bubbleSortMaker.sort(numbersToSort);
+        else
+        {
+            for (int i = 0; i < args.length; i++)
+            {
+                numbersToSort.add(args[i]);
+            }
+
+        }
+
+        List sortedList =  bubbleSortMaker.sort(numbersToSort);
         selectSortMaker.sort(numbersToSort);
         insertSortMaker.sort(numbersToSort);
+
+        sortedList.forEach(System.out::println);
+
 
     }
 
