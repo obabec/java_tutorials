@@ -16,8 +16,8 @@ public class BubbleTest
 {
     Logger log = Logger.getLogger("MyLogger");
     ConsoleHandler cHand = new ConsoleHandler();
-    public SpecialTesterClass specialTester = new SpecialTesterClass();
-    public SortTesterClass sortTesterClass = new SortTesterClass();
+    SimpleFuncTests simpleTester = new SimpleFuncTests();
+    SpecialFuncTest specialTester = new SpecialFuncTest();
 
     @Before
     public void beforeEachTest()
@@ -31,26 +31,18 @@ public class BubbleTest
     @Test
     public void sortTest()
     {
-
-
-
-
-        assertEquals(true, sortTesterClass.RandomIntTest(0));
-        assertEquals(true, sortTesterClass.RandomIntTest(1));
-        assertEquals(true, sortTesterClass.RandomIntTest(2));
+        assertEquals(true,simpleTester.sortTest());
     }
 
 
     @Test
-    public void oneNumberTest()
+    public void oneElementTest()
     {
+        assertEquals(true,specialTester.oneElementTest());
 
-        assertEquals(true, specialTester.OneElementTest(0));
-        assertEquals(true, specialTester.OneElementTest(1));
-        assertEquals(true, specialTester.OneElementTest(2));
     }
 
-
+/*
     @Test
     public void reverseListTest()
     {
@@ -70,7 +62,7 @@ public class BubbleTest
 
 
     }
-
+*/
 
     @After
     public void afterEachTest()

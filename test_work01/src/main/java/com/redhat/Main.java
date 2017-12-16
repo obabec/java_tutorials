@@ -17,38 +17,22 @@ public class Main
     public static InsertSorter insertSortMaker = new InsertSorter();
     public static SelectSorter selectSortMaker = new SelectSorter();
 
+    public static Object osoba;
+    public static List<Object> listerinoOsobino = new ArrayList<>();
+    public static void main(String args[])
+    {
 
-    public static void main(String args[]) {
 
-        toSort.add(1);
-        toSort.add(155);
-        toSort.add(8);
-        toSort.add(2);
 
         for (int i = 0; i < args.length; i++)
         {
             numbersToSort.add(args[i]);
         }
 
-        List<String> wtfSorte = new ArrayList<>();
+        bubbleSortMaker.sort(numbersToSort);
+        selectSortMaker.sort(numbersToSort);
+        insertSortMaker.sort(numbersToSort);
 
-
-        wtfSorte.add("z");
-        wtfSorte.add("a");
-        wtfSorte.add("x");
-        wtfSorte.add("f");
-
-
-        sortedColl = selectSortMaker.sort(wtfSorte);
-
-        numbersToSort.clear();
-        numbersToSort.add(80.00);
-        numbersToSort.add(62.50);
-        numbersToSort.add(71.1);
-        sortedColl.clear();
-        sortedColl = selectSortMaker.sort(wtfSorte);
-        sortedColl.clear();
-        sortedColl = insertSortMaker.sort(wtfSorte);
     }
 
 
