@@ -42,27 +42,21 @@ public class BubbleTest
 
     }
 
-/*
+
     @Test
     public void reverseListTest()
     {
-        assertEquals(true, sortTesterClass.ReverseListTest(0));
-        assertEquals(true, sortTesterClass.ReverseListTest(1));
-        assertEquals(true, sortTesterClass.ReverseListTest(2));
+        assertEquals(true,specialTester.reverselistTest());
 
     }
 
     @Test
     public void emptyListTest()
     {
-
-        assertEquals(true,specialTester.EmptyCollectionTest(0));
-        assertEquals(true,specialTester.EmptyCollectionTest(1));
-        assertEquals(true,specialTester.EmptyCollectionTest(2));
-
+        assertEquals(true,specialTester.emptyListTest());
 
     }
-*/
+
 
     @After
     public void afterEachTest()
