@@ -10,8 +10,7 @@ public class DataReader implements DataRead {
     public Collection<Comparable> checkSwitch(String[] args) {
         if (args[0].equals("-f")){
             return readFromFile(args[1]);
-        }
-        else {
+        } else {
             return readFromConsole(args);
         }
 
