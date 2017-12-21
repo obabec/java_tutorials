@@ -1,6 +1,5 @@
 package com.redhat;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -18,10 +17,12 @@ public class Main {
         DataReader reader = new DataReader();
 
         numbersToSort = reader.checkSwitch(args);
-
-        List sortedList = bubbleSortMaker.sort(numbersToSort);
-        selectSortMaker.sort(numbersToSort);
-        insertSortMaker.sort(numbersToSort);
+        /*numbersToSort.add(80);
+        numbersToSort.add(5);
+        numbersToSort.add(20);
+        numbersToSort.add(8);
+*/
+        List sortedList = insertSortMaker.sort(numbersToSort);
         sortedList.forEach(System.out::println);
     }
 

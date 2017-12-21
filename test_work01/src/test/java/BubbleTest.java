@@ -1,16 +1,13 @@
-import com.redhat.Main;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-
-import java.util.*;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import java.util.stream.Collectors;
+
+import static org.junit.Assert.assertEquals;
 
 public class BubbleTest {
     Logger log = Logger.getLogger("MyLogger");
@@ -31,7 +28,6 @@ public class BubbleTest {
         assertEquals(true,simpleTester.sortTest());
     }
 
-
     @Test
     public void oneElementTest() {
         assertEquals(true,specialTester.oneElementTest());
@@ -47,7 +43,6 @@ public class BubbleTest {
     public void emptyListTest() {
         assertEquals(true,specialTester.emptyListTest());
     }
-
 
     @After
     public void afterEachTest() {
