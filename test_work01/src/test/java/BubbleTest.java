@@ -12,16 +12,14 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.util.stream.Collectors;
 
-public class BubbleTest
-{
+public class BubbleTest {
     Logger log = Logger.getLogger("MyLogger");
     ConsoleHandler cHand = new ConsoleHandler();
     SimpleFuncTests simpleTester = new SimpleFuncTests();
     SpecialFuncTest specialTester = new SpecialFuncTest();
 
     @Before
-    public void beforeEachTest()
-    {
+    public void beforeEachTest() {
         cHand.setFormatter(new SimpleFormatter());
         cHand.setLevel(Level.ALL);
         log.addHandler(cHand);
@@ -29,46 +27,33 @@ public class BubbleTest
     }
 
     @Test
-    public void sortTest()
-    {
+    public void sortTest() {
         assertEquals(true,simpleTester.sortTest());
     }
 
 
     @Test
-    public void oneElementTest()
-    {
+    public void oneElementTest() {
         assertEquals(true,specialTester.oneElementTest());
-
     }
 
 
     @Test
-    public void reverseListTest()
-    {
+    public void reverseListTest() {
         assertEquals(true,specialTester.reverselistTest());
-
     }
 
     @Test
-    public void emptyListTest()
-    {
+    public void emptyListTest() {
         assertEquals(true,specialTester.emptyListTest());
-
     }
 
 
     @After
-    public void afterEachTest()
-    {
+    public void afterEachTest() {
         cHand.setFormatter(new SimpleFormatter());
         cHand.setLevel(Level.ALL);
         log.addHandler(cHand);
         log.fine("Ending test!");
     }
-
-
-
-
-
 }

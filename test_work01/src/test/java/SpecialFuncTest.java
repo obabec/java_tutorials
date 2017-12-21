@@ -9,8 +9,6 @@ public class SpecialFuncTest implements SortInterface{
     @Override
     public List startSort(Collection collection, Integer typeOfSort)
     {
-
-
         List returnList;
         switch (typeOfSort)
         {
@@ -34,73 +32,57 @@ public class SpecialFuncTest implements SortInterface{
         return returnList;
     }
 
-    public boolean oneElementTest()
-    {
+    public boolean oneElementTest() {
         Collection collectionOfNumbers = new ArrayList();
         Integer chybovostSortovani=0;
-
         collectionOfNumbers.add("a");
-
         List listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
 
-        for(int j=0;j<3;j++)
-        {
+        for(int j = 0;j < 3;j++) {
             List controlList = startSort(collectionOfNumbers, j);
-            if (!listForSort.equals(controlList))
-            {
+            if (!listForSort.equals(controlList)) {
                 chybovostSortovani++;
             }
         }
 
-        if (chybovostSortovani == 0)
-        {
+        if (chybovostSortovani == 0) {
             return true;
 
         }
-        else
-        {
+        else {
             return false;
         }
-
-
     }
 
-    public boolean emptyListTest()
-    {
+    public boolean emptyListTest() {
         Collection collectionOfNumbers = new ArrayList();
-        Integer chybovostSortovani=0;
+        Integer chybovostSortovani = 0;
 
         List listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
 
-        for(int j=0;j<3;j++)
-        {
+        for(int j = 0;j < 3;j++) {
             List controlList = startSort(collectionOfNumbers, j);
-            if (!listForSort.equals(controlList))
-            {
+
+            if (!listForSort.equals(controlList)) {
                 chybovostSortovani++;
             }
         }
 
-        if (chybovostSortovani == 0)
-        {
+        if (chybovostSortovani == 0) {
             return true;
-
         }
-        else
-        {
+        else {
             return false;
         }
     }
 
-    public boolean reverselistTest()
-    {
+    public boolean reverselistTest() {
         Collection collectionOfNumbers = new ArrayList();
-        Integer chybovostSortovani=0;
+        Integer chybovostSortovani = 0;
 
         Random rand = new Random();
 
-        for (int i=0;i<15;i++)
-        {
+        for (int i = 0;i < 15;i++) {
             collectionOfNumbers.add(rand.nextInt());
         }
 
@@ -108,30 +90,22 @@ public class SpecialFuncTest implements SortInterface{
         Collections.sort(listForSort);
         Collections.reverse(listForSort);
 
-
-        for(int j=0;j<3;j++)
-        {
+        for(int j = 0;j < 3;j++) {
             List controlList = startSort(listForSort, j);
             Collections.reverse(listForSort);
-            if (!listForSort.equals(controlList))
-            {
+            if (!listForSort.equals(controlList)) {
                 chybovostSortovani++;
             }
             Collections.reverse(listForSort);
         }
 
-        if (chybovostSortovani == 0)
-        {
+        if (chybovostSortovani == 0) {
             return true;
 
         }
-        else
-        {
+        else {
             return false;
         }
-
-
-
     }
 
 
