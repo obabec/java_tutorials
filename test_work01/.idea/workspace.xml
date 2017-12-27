@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="db7c3023-b3f2-4fc1-aaed-1622b11f30b8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/redhat/InsertSorter.java" afterPath="$PROJECT_DIR$/src/main/java/com/redhat/InsertSorter.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/redhat/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/redhat/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -122,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/InsertSorter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+              <caret line="20" column="54" lean-forward="false" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -131,8 +130,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+            <state relative-caret-position="255">
+              <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -554,7 +553,7 @@
       <workItem from="1513856562848" duration="1480000" />
       <workItem from="1513892455049" duration="1478000" />
       <workItem from="1514239239041" duration="1100000" />
-      <workItem from="1514409130041" duration="14000" />
+      <workItem from="1514409130041" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="Maybe it' s right">
       <created>1513078984402</created>
@@ -598,7 +597,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513888135863</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Tests completed">
+      <created>1514409165411</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1514409165412</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -634,7 +640,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80708000" />
+    <option name="totallyTimeSpent" value="80776000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -730,7 +736,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/redhat/InsertSorter.java</url>
-          <line>26</line>
+          <line>29</line>
           <properties />
           <option name="timeStamp" value="131" />
         </line-breakpoint>
@@ -1038,15 +1044,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/InsertSorter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+          <caret line="20" column="54" lean-forward="false" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redhat/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        <state relative-caret-position="255">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding />
         </state>
       </provider>
