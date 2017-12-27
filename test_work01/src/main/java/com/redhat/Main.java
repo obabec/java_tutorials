@@ -17,11 +17,12 @@ public class Main {
         DataReader reader = new DataReader();
 
         numbersToSort = reader.checkSwitch(args);
-        /*numbersToSort.add(80);
-        numbersToSort.add(5);
-        numbersToSort.add(20);
-        numbersToSort.add(8);
-*/
+        /*
+        Cely kod by se dal rozsirit o Comparator, ktery by vyresil uskali Comparable a to jsou objekty,
+        tudiz by se jen z obejktu vybrali atributy, ktere jsou typu Comparable a pomoci nektere z nich
+        by se nasledne array mohl setridit...
+
+        */
         List sortedList = insertSortMaker.sort(numbersToSort);
         sortedList.forEach(System.out::println);
     }

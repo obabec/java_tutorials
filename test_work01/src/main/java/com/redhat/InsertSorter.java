@@ -19,7 +19,6 @@ public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
                 T iteratorCurrentValue = integerIterator.next();
                 mySortedList.add(iteratorCurrentValue);
                 int j = (mySortedList.size() - 1) - 1;
-
                 while ((0 <= j) && (0 < mySortedList.get(j).compareTo(iteratorCurrentValue))) {
                     T swap = mySortedList.get(j);
                     mySortedList.set(j, iteratorCurrentValue);
