@@ -1,13 +1,9 @@
 package com.redhat;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
 
-    @Override
     public List sort(Collection collection) {
         List<T> mySortedList = new ArrayList<>();
         Iterator<T> integerIterator = collection.iterator();
@@ -31,5 +27,10 @@ public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
         }
 
 
+    }
+
+    @Override
+    public List sort(Collection collection, Comparator comparator) {
+        return null;
     }
 }

@@ -9,12 +9,28 @@ import java.util.stream.Collectors;
 public class BubbleSorter <T extends Comparable<T>> implements BasicSorter {
 
 
-
     @Override
-    public List sort(Collection collection) {
-        List<T> mySortedList;
+    public List sort(Collection collection, Comparator comparator) {
+        List <T> mySortedList = (List<T>) collection.stream().collect(Collectors.toList());
+        if (comparator == null){
+            return bubble(mySortedList);
+        }else {
+            T transfer;
+            for (int x = 0; x < mySortedList.size() - 1; x++) {
+                for (int y = 1 + x; y < mySortedList.size(); y++) {
+                    if (0 == comparator.compare(mySortedList.get(x),mySortedList.get(y))) {
+                        transfer = mySortedList.get(x);
+                        mySortedList.set(x, mySortedList.get(y));
+                        mySortedList.set(y, transfer);
+                    }
+                }
+            }
+            return mySortedList;
+        }
 
-        mySortedList = (List<T>) collection.stream().collect(Collectors.toList());
+    }
+
+    private List<T> bubble(List<T> mySortedList){
         T transfer;
         for (int x = 0; x < mySortedList.size() - 1; x++) {
             for (int y = 1 + x; y < mySortedList.size(); y++) {
@@ -29,7 +45,4 @@ public class BubbleSorter <T extends Comparable<T>> implements BasicSorter {
         return mySortedList;
     }
 
-    public List<T> sort(Collection collection, Comparator<T> comparator) {
-
-    }
 }

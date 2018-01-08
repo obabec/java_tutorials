@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Main {
     private static Collection<Comparable> numbersToSort = new ArrayList<>();
-//    private static BubbleSorter bubbleSortMaker = new BubbleSorter();
-    private static InsertSorter insertSortMaker = new InsertSorter();
+    private static BubbleSorter bubbleSortMaker = new BubbleSorter();
+//    private static InsertSorter insertSortMaker = new InsertSorter();
 //    private static SelectSorter selectSortMaker = new SelectSorter();
 
     public static void main(String[] args) {
@@ -15,7 +15,8 @@ public class Main {
         DataReader reader = new DataReader();
 
         numbersToSort = reader.readData(args);
-        List sortedList = insertSortMaker.sort(numbersToSort);
+//        List sortedList = insertSortMaker.sort(numbersToSort);
+        List sortedList = bubbleSortMaker.sort(numbersToSort,null);
         sortedList.forEach(System.out::println);
     }
 }

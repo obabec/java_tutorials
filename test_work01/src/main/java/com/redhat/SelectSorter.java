@@ -1,6 +1,7 @@
 package com.redhat;
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,7 +9,6 @@ public class SelectSorter <T extends Comparable<T>> implements BasicSorter {
 
     private List<T> mySortedList;
 
-    @Override
     public List sort(Collection collection) {
         mySortedList = (List<T>) collection.stream().collect(Collectors.toList());
 
@@ -36,5 +36,10 @@ public class SelectSorter <T extends Comparable<T>> implements BasicSorter {
             }
         }
         return mySortedList;
+    }
+
+    @Override
+    public List sort(Collection collection, Comparator comparator) {
+        return null;
     }
 }

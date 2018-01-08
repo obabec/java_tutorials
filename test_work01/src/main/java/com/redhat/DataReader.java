@@ -3,7 +3,6 @@ package com.redhat;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.logging.Logger;
 
 public class DataReader implements DataRead {
 
