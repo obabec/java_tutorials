@@ -13,9 +13,9 @@ public class BubbleTest {
     Logger log = Logger.getLogger("MyLogger");
     ConsoleHandler cHand = new ConsoleHandler();
     SimpleFuncTests simpleTester = new SimpleFuncTests();
-    SpecialFuncTest specialTester = new SpecialFuncTest();
+    //SpecialFuncTest specialTester = new SpecialFuncTest();
 
-    /*@Before
+    @Before
     public void beforeEachTest() {
         cHand.setFormatter(new SimpleFormatter());
         cHand.setLevel(Level.ALL);
@@ -28,7 +28,7 @@ public class BubbleTest {
         assertEquals(true,simpleTester.sortTest());
     }
 
-    @Test
+   /* @Test
     public void oneElementTest() {
         assertEquals(true,specialTester.oneElementTest());
     }

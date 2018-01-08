@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class SpecialFuncTest implements SortInterface {
     @Override
-    public List startSort(Collection collection, Integer typeOfSort)
+    public List startSort(Collection collection, Integer typeOfSort,Comparator comparator)
     {
         BasicSorter sorter;
         switch (typeOfSort) {
@@ -29,7 +29,7 @@ public class SpecialFuncTest implements SortInterface {
 
     }
 
-    public boolean oneElementTest() {
+    /*public boolean oneElementTest() {
         Collection collectionOfNumbers = new ArrayList();
         Integer chybovostSortovani = 0;
         collectionOfNumbers.add("a");
@@ -103,7 +103,7 @@ public class SpecialFuncTest implements SortInterface {
         else {
             return false;
         }
-    }
+    }*/
 
 
 }

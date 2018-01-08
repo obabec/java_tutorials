@@ -1,7 +1,8 @@
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 
 public interface SortInterface {
 
-    public List startSort(Collection collection, Integer typeOfSort);
+    public List startSort(Collection collection, Integer typeOfSort, Comparator comparator);
 }
