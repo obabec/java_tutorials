@@ -10,11 +10,11 @@ import java.util.stream.Collectors;
 public class SimpleFuncTests implements SortInterface {
     @Override
     public List startSort(Collection collection, Integer typeOfSort) {
-        List returnList;
+        /*List returnList;
         switch (typeOfSort) {
             case 0:
                 BubbleSorter bubbleSorterino = new BubbleSorter();
-                returnList = bubbleSorterino.sort(collection);
+//                returnList = bubbleSorterino.sort(collection);
                 break;
 
             case 1:
@@ -27,7 +27,7 @@ public class SimpleFuncTests implements SortInterface {
                 returnList = insertSorterino.sort(collection);
                 break;
         }
-        return returnList;
+        */return null;
     }
 
 

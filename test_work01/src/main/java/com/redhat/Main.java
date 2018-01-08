@@ -2,6 +2,7 @@ package com.redhat;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -15,7 +16,7 @@ public class Main {
         DataReader reader = new DataReader();
 
         numbersToSort = reader.readData(args);
-//        List sortedList = insertSortMaker.sort(numbersToSort);
+
         List sortedList = bubbleSortMaker.sort(numbersToSort,null);
         sortedList.forEach(System.out::println);
     }

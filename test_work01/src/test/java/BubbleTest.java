@@ -15,7 +15,7 @@ public class BubbleTest {
     SimpleFuncTests simpleTester = new SimpleFuncTests();
     SpecialFuncTest specialTester = new SpecialFuncTest();
 
-    @Before
+    /*@Before
     public void beforeEachTest() {
         cHand.setFormatter(new SimpleFormatter());
         cHand.setLevel(Level.ALL);
@@ -50,5 +50,5 @@ public class BubbleTest {
         cHand.setLevel(Level.ALL);
         log.addHandler(cHand);
         log.fine("Ending test!");
-    }
+    }*/
 }

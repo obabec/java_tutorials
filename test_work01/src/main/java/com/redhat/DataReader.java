@@ -8,6 +8,7 @@ public class DataReader implements DataRead {
 
     @Override
     public Collection<Comparable> readData(String[] args) {
+        Collection<Comparable> numbersToSort = new ArrayList<>();
         if (args[0].equals("-f")) {
 
             try {
@@ -15,12 +16,10 @@ public class DataReader implements DataRead {
                 FileReader fileReader = new FileReader(fileWithContent);
                 BufferedReader bufferedReader = new BufferedReader(fileReader);
                 String line;
-                Collection<Comparable> numbersToSort = new ArrayList<>();
 
                 while ((line = bufferedReader.readLine()) != null) {
                     numbersToSort.add(Integer.parseInt(line));
                 }
-                return numbersToSort;
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
                 System.out.println("Soubor nenalezen");
@@ -31,13 +30,11 @@ public class DataReader implements DataRead {
             }
 
         } else {
-
-            Collection<Comparable> numbersToSort = new ArrayList<>();
             for (int i = 0; i < args.length; i++) {
-                numbersToSort.add(args[i]);
+                numbersToSort.add(Integer.parseInt(args[i]));
             }
-            return numbersToSort;
         }
+        return numbersToSort;
     }
 
 }

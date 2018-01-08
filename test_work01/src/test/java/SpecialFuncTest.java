@@ -25,7 +25,7 @@ public class SpecialFuncTest implements SortInterface {
                 throw new IllegalArgumentException("exception");
         }
 
-        return sorter.sort(collection);
+        return /*sorter.sort(collection)*/ null;
 
     }
 
