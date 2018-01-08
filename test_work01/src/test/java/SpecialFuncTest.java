@@ -1,3 +1,4 @@
+import com.redhat.BasicSorter;
 import com.redhat.BubbleSorter;
 import com.redhat.InsertSorter;
 import com.redhat.SelectSorter;
@@ -5,36 +6,32 @@ import com.redhat.SelectSorter;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class SpecialFuncTest implements SortInterface{
+public class SpecialFuncTest implements SortInterface {
     @Override
     public List startSort(Collection collection, Integer typeOfSort)
     {
-        List returnList;
-        switch (typeOfSort)
-        {
+        BasicSorter sorter;
+        switch (typeOfSort) {
             case 0:
-                BubbleSorter bubbleSorterino = new BubbleSorter();
-                returnList = bubbleSorterino.sort(collection);
-
+                sorter = new BubbleSorter();
                 break;
-
             case 1:
-                SelectSorter selectSorterino = new SelectSorter();
-                returnList = selectSorterino.sort(collection);
-
+                sorter = new InsertSorter();
                 break;
-
+            case 2:
+                sorter = new SelectSorter();
+                break;
             default:
-                InsertSorter insertSorterino = new InsertSorter();
-                returnList = insertSorterino.sort(collection);
-                break;
+                throw new IllegalArgumentException("exception");
         }
-        return returnList;
+
+        return sorter.sort(collection);
+
     }
 
     public boolean oneElementTest() {
         Collection collectionOfNumbers = new ArrayList();
-        Integer chybovostSortovani=0;
+        Integer chybovostSortovani = 0;
         collectionOfNumbers.add("a");
         List listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
 

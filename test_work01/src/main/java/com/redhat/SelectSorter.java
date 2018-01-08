@@ -16,7 +16,7 @@ public class SelectSorter <T extends Comparable<T>> implements BasicSorter {
             T min;
             int number = 0;
             T swap;
-            int j = 0;
+            int j;
 
             for (int i = 0;i < mySortedList.size();i++) {
                 min = mySortedList.get(i);
