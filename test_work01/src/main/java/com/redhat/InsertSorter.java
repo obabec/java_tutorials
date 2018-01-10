@@ -9,6 +9,7 @@ public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
 
         return sort(collection,null);
     }
+
     @Override
     public List sort(Collection collection,Comparator comparator) {
         List<T> mySortedList = new ArrayList<>();
@@ -21,12 +22,16 @@ public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
                 T iteratorCurrentValue = integerIterator.next();
                 mySortedList.add(iteratorCurrentValue);
                 int j = (mySortedList.size() - 1) - 1;
-                while ((0 <= j) && (0 < (comparator == null ? mySortedList.get(j).compareTo(iteratorCurrentValue) :
-                                        comparator.compare(mySortedList.get(j),iteratorCurrentValue)))) {
+                int statement = (comparator == null ? mySortedList.get(j).compareTo(iteratorCurrentValue) :
+                        comparator.compare(mySortedList.get(j),iteratorCurrentValue));
+
+                while ((0 <= j) && (0 < statement)) {
                     T swap = mySortedList.get(j);
                     mySortedList.set(j, iteratorCurrentValue);
                     mySortedList.set(j + 1, swap);
                     j--;
+                    statement = (comparator == null ? mySortedList.get(j).compareTo(iteratorCurrentValue) :
+                            comparator.compare(mySortedList.get(j),iteratorCurrentValue));
                 }
             }
 
