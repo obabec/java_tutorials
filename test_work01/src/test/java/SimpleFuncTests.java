@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SimpleFuncTests implements SortInterface {
+public class SimpleFuncTests <T extends Comparable> implements SortInterface {
     @Override
     public List startSort(Collection collection, Integer typeOfSort, Comparator comparator) {
         List returnList;
@@ -39,29 +39,23 @@ public class SimpleFuncTests implements SortInterface {
         /*for (int i = 0;i < 15;i++) {
             collectionOfNumbers.add(rand.nextInt());
         }*/
-        Comparator<Person> comparator = new Comparator<Person>() {
-            @Override
-            public int compare(Person o1, Person o2) {
-                return o1.getName().compareTo(o2.getName());
-            }
-        };
 
-        Person pavel = new Person("Pavel","Reh",15);
-        Person honza = new Person("Jan","Reh",15);
-        Person petr = new Person("Petr","Reh",15);
+        Comparator<T> comparator = Collections.reverseOrder(null);
 
-        collectionOfNumbers.add(pavel);
-        collectionOfNumbers.add(honza);
-        collectionOfNumbers.add(petr);
+        collectionOfNumbers.add(5);
+        collectionOfNumbers.add(8);
+        collectionOfNumbers.add(1);
 
-        List<Person> listForSort;
+        List<T> listForSort;
         listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
         Collections.sort(listForSort,comparator);
 
-        List controlList = new ArrayList<>();
+
+        List controlList;
 
         for(int j = 0;j < 1;j++) {
             controlList = startSort(collectionOfNumbers, j,comparator);
+            Collections.reverse(controlList);
             if (!listForSort.equals(controlList)) {
                 chybovostSortovani++;
             }
