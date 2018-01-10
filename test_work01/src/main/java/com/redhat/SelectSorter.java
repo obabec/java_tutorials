@@ -13,6 +13,7 @@ public class SelectSorter <T extends Comparable<T>> implements BasicSorter {
         return sort(collection, null);
     }
 
+    @Override
     public List sort(Collection collection, Comparator comparator) {
         List<T> mySortedList;
         mySortedList = (List<T>) collection.stream().collect(Collectors.toList());

@@ -9,6 +9,7 @@ public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
 
         return sort(collection,null);
     }
+    @Override
     public List sort(Collection collection,Comparator comparator) {
         List<T> mySortedList = new ArrayList<>();
         Iterator<T> integerIterator = collection.iterator();
