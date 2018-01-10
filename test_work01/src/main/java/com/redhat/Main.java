@@ -16,7 +16,7 @@ public class Main {
 
         numbersToSort = reader.readData(args);
 
-        List sortedList = bubbleSortMaker.sort(numbersToSort,null);
+        List sortedList = bubbleSortMaker.sort(numbersToSort);
         sortedList.forEach(System.out::println);
     }
 }
