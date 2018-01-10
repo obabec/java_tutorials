@@ -3,11 +3,15 @@ package com.redhat;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class DataReader implements DataRead {
 
     @Override
     public Collection<Comparable> readData(String[] args) {
+        final Logger logger = LoggerFactory.getLogger(DataReader.class);
+
         Collection<Comparable> numbersToSort = new ArrayList<>();
         if (args[0].equals("-f")) {
 
@@ -22,7 +26,7 @@ public class DataReader implements DataRead {
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
-                System.out.println("Soubor nenalezen");
+                logger.warn("Soubor nenalezen");
                 return null;
             } catch (IOException e) {
                 e.printStackTrace();

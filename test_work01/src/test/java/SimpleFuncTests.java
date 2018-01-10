@@ -34,11 +34,6 @@ public class SimpleFuncTests <T extends Comparable> implements SortInterface {
     public boolean sortTest() {
         Collection collectionOfNumbers = new ArrayList();
         Integer chybovostSortovani = 0;
-        Random rand = new Random();
-
-        /*for (int i = 0;i < 15;i++) {
-            collectionOfNumbers.add(rand.nextInt());
-        }*/
 
         Comparator<T> comparator = Collections.reverseOrder(null);
 
@@ -50,10 +45,9 @@ public class SimpleFuncTests <T extends Comparable> implements SortInterface {
         listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
         Collections.sort(listForSort,comparator);
 
-
         List controlList;
 
-        for(int j = 0;j < 1;j++) {
+        for(int j = 0;j < 3;j++) {
             controlList = startSort(collectionOfNumbers, j,comparator);
             Collections.reverse(controlList);
             if (!listForSort.equals(controlList)) {
