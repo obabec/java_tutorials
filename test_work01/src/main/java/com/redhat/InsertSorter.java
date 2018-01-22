@@ -37,7 +37,7 @@ public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
             return mySortedList;
         }
 
-    public int verifyComparator(Comparator comparator,List<T> mySortedList,T iteratorCurrent,int position){
+    private int verifyComparator(Comparator comparator,List<T> mySortedList,T iteratorCurrent,int position){
         if (comparator == null){
             return mySortedList.get(position).compareTo(iteratorCurrent);
         }else {
