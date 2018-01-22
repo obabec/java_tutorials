@@ -13,7 +13,7 @@ public class CompleteTest {
     SimpleFuncTests simpleTester = new SimpleFuncTests();
     DataTest dataTester = new DataTest();
 
-    //SpecialFuncTest specialTester = new SpecialFuncTest();
+    SpecialFuncTest specialTester = new SpecialFuncTest();
 
     @Before
     public void beforeEachTest() {
@@ -29,7 +29,7 @@ public class CompleteTest {
         assertEquals(1,dataTester.dataVerification());
     }
 
-   /* @Test
+    @Test
     public void oneElementTest() {
         assertEquals(true,specialTester.oneElementTest());
     }
@@ -44,7 +44,7 @@ public class CompleteTest {
     public void emptyListTest() {
         assertEquals(true,specialTester.emptyListTest());
     }
-    */
+
     @After
     public void afterEachTest() {
         LOGGER.info("Test ended");

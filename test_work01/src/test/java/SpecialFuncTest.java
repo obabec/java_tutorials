@@ -25,18 +25,18 @@ public class SpecialFuncTest implements SortInterface {
                 throw new IllegalArgumentException("exception");
         }
 
-        return /*sorter.sort(collection)*/ null;
+        return sorter.sort(collection);
 
     }
 
-    /*public boolean oneElementTest() {
+    public boolean oneElementTest() {
         Collection collectionOfNumbers = new ArrayList();
         Integer chybovostSortovani = 0;
         collectionOfNumbers.add("a");
         List listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
 
         for(int j = 0;j < 3;j++) {
-            List controlList = startSort(collectionOfNumbers, j);
+            List controlList = startSort(collectionOfNumbers, j,null);
             if (!listForSort.equals(controlList)) {
                 chybovostSortovani++;
             }
@@ -58,7 +58,7 @@ public class SpecialFuncTest implements SortInterface {
         List listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
 
         for(int j = 0;j < 3;j++) {
-            List controlList = startSort(collectionOfNumbers, j);
+            List controlList = startSort(collectionOfNumbers, j,null);
 
             if (!listForSort.equals(controlList)) {
                 chybovostSortovani++;
@@ -88,7 +88,7 @@ public class SpecialFuncTest implements SortInterface {
         Collections.reverse(listForSort);
 
         for(int j = 0;j < 3;j++) {
-            List controlList = startSort(listForSort, j);
+            List controlList = startSort(listForSort, j, Comparator.reverseOrder());
             Collections.reverse(listForSort);
             if (!listForSort.equals(controlList)) {
                 chybovostSortovani++;
@@ -103,7 +103,7 @@ public class SpecialFuncTest implements SortInterface {
         else {
             return false;
         }
-    }*/
+    }
 
 
 }
