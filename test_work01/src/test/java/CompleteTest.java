@@ -12,6 +12,7 @@ public class CompleteTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(CompleteTest.class);
     SimpleFuncTests simpleTester = new SimpleFuncTests();
     DataTest dataTester = new DataTest();
+
     //SpecialFuncTest specialTester = new SpecialFuncTest();
 
     @Before

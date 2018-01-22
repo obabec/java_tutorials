@@ -25,9 +25,11 @@ public class FileDataReader implements DataReader{
             }
 
         } catch (FileNotFoundException e) {
+            LOGGER.warn("Bad file path!");
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+            LOGGER.warn("Bad file path!");
         }
 
         return data;
