@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class FileDataReader implements DataReader{
@@ -15,12 +16,12 @@ public class FileDataReader implements DataReader{
 
     @Override
     public Collection<Comparable> readData(String filePath) {
-        Collection data = null;
+        Collection data = new ArrayList();
         LOGGER.info("File read started");
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))){
             String line = null;
             while ((line = br.readLine()) != null){
-            data.add(line);
+                data.add(line);
             }
 
         } catch (FileNotFoundException e) {

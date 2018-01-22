@@ -16,13 +16,12 @@ public class Main {
     public static void main(String[] args) {
 
         LOGGER.warn("Started main");
-        FileDataReader reader = new FileDataReader();
-        if (reader.readData(args[0]) == null){
+        FileDataReader fileReader = new FileDataReader();
+        if (fileReader.readData(args[0]) == null){
             LOGGER.warn("Bad path or empty file");
         }else {
-            numbersToSort = reader.readData(args[0]);
+            numbersToSort = fileReader.readData(args[0]);
         }
-
 
         List sortedList = bubbleSortMaker.sort(numbersToSort);
         sortedList.forEach(System.out::println);

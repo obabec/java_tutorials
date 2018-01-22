@@ -1,31 +1,31 @@
+import com.redhat.FileDataReader;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.ConsoleHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 import static org.junit.Assert.assertEquals;
 
-public class BubbleTest {
-    Logger log = Logger.getLogger("MyLogger");
-    ConsoleHandler cHand = new ConsoleHandler();
+public class CompleteTest {
+    private static final Logger LOGGER = LoggerFactory.getLogger(CompleteTest.class);
     SimpleFuncTests simpleTester = new SimpleFuncTests();
+    DataTest dataTester = new DataTest();
     //SpecialFuncTest specialTester = new SpecialFuncTest();
 
     @Before
     public void beforeEachTest() {
-        cHand.setFormatter(new SimpleFormatter());
-        cHand.setLevel(Level.ALL);
-        log.addHandler(cHand);
-        log.fine("Starting new test!");
+        LOGGER.info("Test started");
     }
 
     @Test
     public void sortTest() {
         assertEquals(true,simpleTester.sortTest());
+    }
+    @Test
+    public void dataReaderTest() {
+        assertEquals(1,dataTester.dataVerification());
     }
 
    /* @Test
@@ -43,12 +43,9 @@ public class BubbleTest {
     public void emptyListTest() {
         assertEquals(true,specialTester.emptyListTest());
     }
-
+    */
     @After
     public void afterEachTest() {
-        cHand.setFormatter(new SimpleFormatter());
-        cHand.setLevel(Level.ALL);
-        log.addHandler(cHand);
-        log.fine("Ending test!");
-    }*/
+        LOGGER.info("Test ended");
+    }
 }
