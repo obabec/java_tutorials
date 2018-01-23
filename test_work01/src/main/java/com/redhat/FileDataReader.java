@@ -32,6 +32,11 @@ public class FileDataReader implements DataReader{
             LOGGER.warn("Bad file path!");
         }
 
-        return data;
+        if (data.isEmpty()){
+            return null;
+        }else {
+            return data;
+        }
+
     }
 }

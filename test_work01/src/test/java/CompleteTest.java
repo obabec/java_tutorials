@@ -1,4 +1,3 @@
-import com.redhat.FileDataReader;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -6,13 +5,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
+
 import static org.junit.Assert.assertEquals;
 
 public class CompleteTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(CompleteTest.class);
     SimpleFuncTests simpleTester = new SimpleFuncTests();
-    DataTest dataTester = new DataTest();
-
+    private DataStream dataStreamer = new DataStream();
     SpecialFuncTest specialTester = new SpecialFuncTest();
 
     @Before
@@ -26,7 +28,27 @@ public class CompleteTest {
     }
     @Test
     public void dataReaderTest() {
-        assertEquals(1,dataTester.dataVerification());
+        Collection collection = new ArrayList();
+        collection.add("Ahoj");
+        collection.add("22");
+        collection.add("11");
+        collection.add("svete!");
+
+        dataStreamer.setFilerino(new File("temporary.tmp"));
+        dataStreamer.createFile(collection);
+
+        Collection outputCollection = dataStreamer.initializeFile();
+        assertEquals(collection,outputCollection);
+        dataStreamer.destroyFilerino();
+    }
+
+    @Test
+    public void emptyFileTest() {
+        dataStreamer.setFilerino(new File("temporary.tmp"));
+        dataStreamer.createFile(null);
+        Collection outputCollection = dataStreamer.initializeFile();
+        assertEquals(null,outputCollection);
+        dataStreamer.destroyFilerino();
     }
 
     @Test
