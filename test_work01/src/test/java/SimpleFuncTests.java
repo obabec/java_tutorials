@@ -31,34 +31,11 @@ public class SimpleFuncTests <T extends Comparable> implements SortInterface {
     }
 
 
-    public boolean sortTest() {
-        Collection collectionOfNumbers = new ArrayList();
-        Integer chybovostSortovani = 0;
+    public List simpleSort(Collection collection, int typeOfSort) {
 
-        Comparator<T> comparator = Collections.reverseOrder(null);
+        collection = startSort(collection, typeOfSort,null);
+        List dataList = new ArrayList(collection);
+        return dataList;
 
-        collectionOfNumbers.add(5);
-        collectionOfNumbers.add(8);
-        collectionOfNumbers.add(1);
-
-        List<T> listForSort;
-        listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
-        Collections.sort(listForSort,comparator);
-
-        List controlList;
-
-        for(int j = 0;j < 3;j++) {
-            controlList = startSort(collectionOfNumbers, j,comparator);
-            Collections.reverse(controlList);
-            if (!listForSort.equals(controlList)) {
-                chybovostSortovani++;
-            }
-        }
-        if (chybovostSortovani == 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
     }
 }

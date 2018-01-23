@@ -1,8 +1,7 @@
-import com.redhat.FileDataReader;
+import com.redhat.PlainFileDataReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -51,7 +50,7 @@ public class DataStream {
 
     public Collection initializeFile(){
 
-        FileDataReader fileReader = new FileDataReader();
+        PlainFileDataReader fileReader = new PlainFileDataReader();
         Collection collectionData = fileReader.readData(filerino.getPath());
         return collectionData;
 

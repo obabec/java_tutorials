@@ -6,8 +6,7 @@ import org.slf4j.LoggerFactory;
 
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -24,7 +23,15 @@ public class CompleteTest {
 
     @Test
     public void sortTest() {
-        assertEquals(true,simpleTester.sortTest());
+        Collection collection = new ArrayList();
+        collection.add(8);
+        collection.add(5);
+        collection.add(12);
+        List controlList = new ArrayList(collection);
+        Collections.sort(controlList);
+        for (int i = 0; i < 3; i++) {
+            assertEquals(controlList,simpleTester.simpleSort(collection,i));
+        }
     }
     @Test
     public void dataReaderTest() {
@@ -53,18 +60,38 @@ public class CompleteTest {
 
     @Test
     public void oneElementTest() {
-        assertEquals(true,specialTester.oneElementTest());
+        Collection collection = new ArrayList();
+        collection.add(1);
+        List controlList = new ArrayList(collection);
+        for (int i = 0; i < 3; i++) {
+            assertEquals(controlList,specialTester.oneElementTest(collection,i));
+        }
     }
 
 
     @Test
     public void reverseListTest() {
-        assertEquals(true,specialTester.reverselistTest());
+        Collection collectionOfNumbers = new ArrayList();
+        Random rand = new Random();
+
+        for (int i = 0;i < 15;i++) {
+            collectionOfNumbers.add(rand.nextInt());
+        }
+        List controlList = new ArrayList(collectionOfNumbers);
+        Collections.sort(controlList);
+
+        for (int i = 0; i < 3; i++) {
+            assertEquals(controlList,specialTester.reverseListTest(controlList,i));
+        }
+
     }
 
     @Test
     public void emptyListTest() {
-        assertEquals(true,specialTester.emptyListTest());
+        Collection collection = new ArrayList();
+        for (int i = 0; i < 3; i++) {
+            assertEquals(null,specialTester.emptyListTest(collection,i));
+        }
     }
 
     @After

@@ -29,15 +29,10 @@ public class BubbleSorter <T extends Comparable<? super T>> implements BasicSort
                             mySortedList.set(x, mySortedList.get(y));
                             mySortedList.set(y, transfer);
                         }
-
                     }
                 }
                 return mySortedList;
-
     }
-
-
-
 }
 
 

@@ -29,80 +29,29 @@ public class SpecialFuncTest implements SortInterface {
 
     }
 
-    public boolean oneElementTest() {
-        Collection collectionOfNumbers = new ArrayList();
-        Integer chybovostSortovani = 0;
-        collectionOfNumbers.add("a");
-        List listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
+    public List oneElementTest(Collection collection, int typeOfSort) {
 
-        for(int j = 0;j < 3;j++) {
-            List controlList = startSort(collectionOfNumbers, j,null);
-            if (!listForSort.equals(controlList)) {
-                chybovostSortovani++;
-            }
-        }
+            List controlList = startSort(collection, typeOfSort,null);
+            return controlList;
 
-        if (chybovostSortovani == 0) {
-            return true;
-
-        }
-        else {
-            return false;
-        }
     }
 
-    public boolean emptyListTest() {
-        Collection collectionOfNumbers = new ArrayList();
-        Integer chybovostSortovani = 0;
+    public List emptyListTest(Collection collection, int typeOfSort) {
 
-        List listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
-
-        for(int j = 0;j < 3;j++) {
-            List controlList = startSort(collectionOfNumbers, j,null);
-
-            if (!listForSort.equals(controlList)) {
-                chybovostSortovani++;
-            }
+        List controlList = startSort(collection, typeOfSort,null);
+        if (controlList.isEmpty()) {
+            return null;
+        }else {
+            return controlList;
         }
 
-        if (chybovostSortovani == 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
     }
 
-    public boolean reverselistTest() {
-        Collection collectionOfNumbers = new ArrayList();
-        Integer chybovostSortovani = 0;
+    public List reverseListTest(List listForSort, int typeOfSort) {
 
-        Random rand = new Random();
+        List controlList = startSort(listForSort, typeOfSort, Comparator.reverseOrder());
+        return controlList;
 
-        for (int i = 0;i < 15;i++) {
-            collectionOfNumbers.add(rand.nextInt());
-        }
-
-        List listForSort = (List) collectionOfNumbers.stream().collect(Collectors.toList());
-        Collections.sort(listForSort);
-        Collections.reverse(listForSort);
-
-        for(int j = 0;j < 3;j++) {
-            List controlList = startSort(listForSort, j, Comparator.reverseOrder());
-            Collections.reverse(listForSort);
-            if (!listForSort.equals(controlList)) {
-                chybovostSortovani++;
-            }
-            Collections.reverse(listForSort);
-        }
-
-        if (chybovostSortovani == 0) {
-            return true;
-
-        }
-        else {
-            return false;
-        }
     }
 
 

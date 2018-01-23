@@ -10,12 +10,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class FileDataReader implements DataReader{
+public class PlainFileDataReader implements DataReader{
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FileDataReader.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PlainFileDataReader.class);
 
     @Override
-    public Collection<Comparable> readData(String filePath) {
+    public Collection readData(String filePath) {
         Collection data = new ArrayList();
         LOGGER.info("File read started");
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))){
