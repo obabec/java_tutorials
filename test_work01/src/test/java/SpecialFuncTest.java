@@ -1,7 +1,4 @@
-import com.redhat.BasicSorter;
-import com.redhat.BubbleSorter;
-import com.redhat.InsertSorter;
-import com.redhat.SelectSorter;
+import com.redhat.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -21,6 +18,11 @@ public class SpecialFuncTest implements SortInterface {
             case 2:
                 sorter = new SelectSorter();
                 break;
+
+            case 3:
+                sorter = new QuickSorter();
+                break;
+
             default:
                 throw new IllegalArgumentException("exception");
         }

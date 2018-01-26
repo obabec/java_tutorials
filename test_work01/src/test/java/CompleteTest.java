@@ -26,10 +26,14 @@ public class CompleteTest {
         Collection collection = new ArrayList();
         collection.add(8);
         collection.add(5);
+        collection.add(4);
         collection.add(12);
+        collection.add(23);
+        collection.add(1);
+        collection.add(6);
         List controlList = new ArrayList(collection);
         Collections.sort(controlList);
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             assertEquals(controlList,simpleTester.simpleSort(collection,i));
         }
     }
