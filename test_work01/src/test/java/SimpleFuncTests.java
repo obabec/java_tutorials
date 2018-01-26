@@ -1,6 +1,4 @@
-import com.redhat.BubbleSorter;
-import com.redhat.InsertSorter;
-import com.redhat.SelectSorter;
+import com.redhat.*;
 
 import java.awt.*;
 import java.util.*;
@@ -10,24 +8,27 @@ import java.util.stream.Collectors;
 public class SimpleFuncTests <T extends Comparable> implements SortInterface {
     @Override
     public List startSort(Collection collection, Integer typeOfSort, Comparator comparator) {
-        List returnList;
+        BasicSorter sorter;
         switch (typeOfSort) {
             case 0:
-                BubbleSorter bubbleSorterino = new BubbleSorter();
-                returnList = bubbleSorterino.sort(collection, comparator);
+                sorter = new BubbleSorter();
                 break;
 
             case 1:
-                SelectSorter selectSorterino = new SelectSorter();
-                returnList = selectSorterino.sort(collection);
+                sorter = new SelectSorter();
                 break;
 
-            default:
-                InsertSorter insertSorterino = new InsertSorter();
-                returnList = insertSorterino.sort(collection);
+            case 2:
+                sorter = new QuickSorter();
                 break;
+
+            case 3:
+                sorter = new InsertSorter();
+                break;
+            default:
+                throw new IllegalArgumentException();
         }
-        return returnList;
+        return sorter.sort(collection,comparator);
     }
 
 
