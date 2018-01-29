@@ -1,4 +1,4 @@
-package com.redhat;
+package com.redhat.sorts;
 
 import java.util.Collection;
 import java.util.Comparator;

@@ -1,7 +1,6 @@
-import com.redhat.*;
+import com.redhat.sorts.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class SpecialFuncTest implements SortInterface {
     @Override

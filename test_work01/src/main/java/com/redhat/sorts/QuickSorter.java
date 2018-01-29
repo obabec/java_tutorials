@@ -1,4 +1,4 @@
-package com.redhat;
+package com.redhat.sorts;
 
 import java.util.Collection;
 import java.util.Comparator;
@@ -20,7 +20,7 @@ public class QuickSorter <T extends Comparable<T>> implements BasicSorter {
 
         numbersForSort = (List<T>) collection.stream().collect(Collectors.toList());
 
-        recursiveSort(0,numbersForSort.size() - 1,comparator);
+        recursiveSort(0, numbersForSort.size() - 1, comparator);
         return numbersForSort;
     }
 
@@ -72,8 +72,8 @@ public class QuickSorter <T extends Comparable<T>> implements BasicSorter {
         T tempVal;
 
         tempVal = numbersForSort.get(firstPos);
-        numbersForSort.set(firstPos,numbersForSort.get(secondPos));
-        numbersForSort.set(secondPos,tempVal);
+        numbersForSort.set(firstPos, numbersForSort.get(secondPos));
+        numbersForSort.set(secondPos, tempVal);
 
     }
 }

@@ -1,4 +1,4 @@
-package com.redhat;
+package com.redhat.sorts;
 
 import java.util.*;
 
@@ -23,26 +23,24 @@ public class InsertSorter <T extends Comparable<T>> implements BasicSorter {
                 mySortedList.add(iteratorCurrentValue);
                 int j = (mySortedList.size() - 1) - 1;
 
-                while ((0 <= j) && 0 < verifyComparator(comparator,mySortedList,iteratorCurrentValue,j)) {
+                while ((0 <= j) && 0 < stateOfCompare(comparator, mySortedList, iteratorCurrentValue, j)) {
 
                     T swap = mySortedList.get(j);
                     mySortedList.set(j, iteratorCurrentValue);
                     mySortedList.set(j + 1, swap);
                     j--;
                 }
-
-                }
             }
-
-            return mySortedList;
         }
+            return mySortedList;
+    }
 
-    private int verifyComparator(Comparator comparator,List<T> mySortedList,T iteratorCurrent,int position){
-        if (comparator == null){
+    private int stateOfCompare(Comparator comparator, List<T> mySortedList, T iteratorCurrent, int position){
+        if (comparator == null) {
             return mySortedList.get(position).compareTo(iteratorCurrent);
-        }else {
+        } else {
             return comparator.compare(mySortedList.get(position),iteratorCurrent);
         }
 
     }
-    }
+}

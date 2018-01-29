@@ -1,4 +1,4 @@
-package com.redhat;
+package com.redhat.data;
 
 import java.util.Collection;
 

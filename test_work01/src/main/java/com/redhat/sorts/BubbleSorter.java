@@ -1,4 +1,4 @@
-package com.redhat;
+package com.redhat.sorts;
 
 
 import java.util.Collection;
@@ -23,7 +23,8 @@ public class BubbleSorter <T extends Comparable<? super T>> implements BasicSort
                     for (int y = 1 + x; y < mySortedList.size(); y++) {
 
                         int state = (comparator == null ? mySortedList.get(x).compareTo(mySortedList.get(y)) :
-                                comparator.compare(mySortedList.get(y),mySortedList.get(x)));
+                                comparator.compare(mySortedList.get(y), mySortedList.get(x)));
+
                         if (0 < state) {
                             transfer = mySortedList.get(x);
                             mySortedList.set(x, mySortedList.get(y));

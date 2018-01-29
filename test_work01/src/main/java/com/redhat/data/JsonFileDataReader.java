@@ -1,4 +1,4 @@
-package com.redhat;
+package com.redhat.data;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -10,6 +10,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.redhat.utils.Employee;
 
 public class JsonFileDataReader implements DataReader{
 

@@ -1,4 +1,4 @@
-package com.redhat;
+package com.redhat.data;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

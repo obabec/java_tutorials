@@ -1,4 +1,4 @@
-import com.redhat.PlainFileDataReader;
+import com.redhat.data.PlainFileDataReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.*;

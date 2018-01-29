@@ -1,40 +1,46 @@
 package com.redhat;
 
 import com.beust.jcommander.JCommander;
+import com.redhat.cmd.CommandLineSettings;
+import com.redhat.data.DataReader;
+import com.redhat.data.JsonFileDataReader;
+import com.redhat.data.PlainFileDataReader;
+import com.redhat.sorts.BasicSorter;
+import com.redhat.sorts.QuickSorter;
+import com.redhat.utils.Employee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
 
-    private static Collection<Comparable> numbersToSort = new ArrayList<>();
-/*
-    private static BubbleSorter bubbleSortMaker = new BubbleSorter();
 
-    private static InsertSorter insertSortMaker = new InsertSorter();*/
-    private static QuickSorter quickSorter = new QuickSorter();
     public static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
-        LOGGER.warn("Started main");
-        Settings settings = new Settings();
-        new JCommander(settings,args);
+
+        Collection numbersToSort = new ArrayList();
+
+        BasicSorter sorter;
+        sorter = new QuickSorter();
+        LOGGER.info("Started main");
+        CommandLineSettings settings = new CommandLineSettings();
+        new JCommander(settings, args);
 
         DataReader fileDataReader;
 
         if (settings.isTypeOfContent()) {
-             fileDataReader = new PlainFileDataReader();
-            numbersToSort = fileDataReader.readData(settings.getPath());
 
-            List sortedList = quickSorter.sort(numbersToSort,null);
+            LOGGER.info("Plain text sorting");
+            fileDataReader = new PlainFileDataReader();
+            numbersToSort = fileDataReader.readData(settings.getPath());
+            List sortedList = sorter.sort(numbersToSort, (settings.isSortOrder()?Collections.reverseOrder():null));
             sortedList.forEach(System.out::println);
 
         } else {
-             fileDataReader = new JsonFileDataReader();
+            LOGGER.info("JSON data sorting");
+            fileDataReader = new JsonFileDataReader();
             numbersToSort = fileDataReader.readData(settings.getPath());
 
             Comparator<Employee> c = new Comparator<Employee>() {
@@ -44,11 +50,8 @@ public class Main {
                 }
             };
 
-            List<Employee> sortedList = quickSorter.sort(numbersToSort,c);
+            List<Employee> sortedList = sorter.sort(numbersToSort,(settings.isSortOrder()?c.reversed():c));
             sortedList.forEach(employee -> System.out.println(employee.getName() + " : " +employee.getBirthDate()));
-
         }
-
     }
-
 }

@@ -1,9 +1,7 @@
-import com.redhat.*;
+import com.redhat.sorts.*;
 
-import java.awt.*;
 import java.util.*;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class SimpleFuncTests <T extends Comparable> implements SortInterface {
     @Override

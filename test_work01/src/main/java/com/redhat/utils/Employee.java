@@ -1,4 +1,4 @@
-package com.redhat;
+package com.redhat.utils;
 
 import java.util.Date;
 
