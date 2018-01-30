@@ -7,7 +7,7 @@ import java.util.List;
 public class SelectSorter implements DataSorter {
     @Override
     public List sort(Collection collection, Comparator comparator) {
-        return null;
+        throw new RuntimeException();
     }
 
     @Override

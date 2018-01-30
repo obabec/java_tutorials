@@ -6,6 +6,6 @@ import com.redhat.sorting.parse.DataParser;
 public class ParseSelection implements ParseSelector {
     @Override
     public DataParser selectParser(CommadLineParser cmdParser) {
-        return null;
+        throw new RuntimeException();
     }
 }

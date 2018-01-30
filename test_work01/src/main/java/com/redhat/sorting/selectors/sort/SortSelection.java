@@ -6,6 +6,6 @@ import com.redhat.sorting.sort.DataSorter;
 public class SortSelection implements SortSelector {
     @Override
     public DataSorter selectSorter(CommadLineParser cmdParser) {
-        return null;
+        throw new RuntimeException();
     }
 }
