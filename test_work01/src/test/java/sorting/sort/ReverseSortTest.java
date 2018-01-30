@@ -1,26 +1,29 @@
 package sorting.sort;
 
-import com.redhat.sorting.sort.*;
 import org.junit.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class SortTest {
-
+public class ReverseSortTest {
     @Test
-    public void sortTest() {
+    public void reverseCollectionTest() {
+
         CollectionWorker collectionWorker = new CollectionWorker();
         Collection collection = new ArrayList();
         collection = collectionWorker.createCollectionForTest(collection);
-
         List controlList = new ArrayList(collection);
         Collections.sort(controlList);
+        Collections.reverse(controlList);
 
         for(int i = 0; i < 3; i++){
-            assertEquals(controlList,collectionWorker.startSort(i,collection, null));
+            assertEquals(controlList,collectionWorker.startSort(i,collection, Collections.reverseOrder()));
         }
-    }
 
+
+    }
 }
