@@ -20,13 +20,13 @@ public class Main {
     public static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
 
-        Collection numbersToSort = new ArrayList();
+        Collection numbersToSort;
 
         BasicSorter sorter;
         sorter = new QuickSorter();
         LOGGER.info("Started main");
         CommandLineSettings settings = new CommandLineSettings();
-        new JCommander(settings, args);
+        JCommander.newBuilder().addObject(settings).build().parse(args);
 
         DataReader fileDataReader;
 

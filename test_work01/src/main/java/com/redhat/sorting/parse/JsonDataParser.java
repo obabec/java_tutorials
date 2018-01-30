@@ -7,4 +7,8 @@ public class JsonDataParser implements DataParser{
     public List parseData(byte[] data) {
         throw new RuntimeException();
     }
+
+    public List parseDataForOutput() {
+        throw new RuntimeException();
+    }
 }

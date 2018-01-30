@@ -1,10 +1,11 @@
 package com.redhat.sorting.read;
 
-import java.nio.file.Path;
+import java.io.FileNotFoundException;
 
 public class RawDataReader implements DataReader{
     @Override
-    public byte[] readData(Path filePath) {
+    public byte[] readData(String filePath) throws FileNotFoundException {
         throw new RuntimeException();
+
     }
 }
