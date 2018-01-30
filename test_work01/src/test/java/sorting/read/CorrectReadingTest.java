@@ -1,51 +1,17 @@
 package sorting.read;
 
-import com.redhat.data.PlainFileDataReader;
 import com.redhat.sorting.read.RawDataReader;
 import org.junit.Test;
 import sorting.DataStream;
 
-import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
-public class ReadTest {
-
-    @Test
-    public void badPathTest() {
-        boolean thrown = false;
-
-        try {
-            RawDataReader dataReader = new RawDataReader();
-            String path = "/X/x.txt";
-            dataReader.readData(path);
-        } catch (FileNotFoundException e) {
-            thrown = true;
-        }
-        assertTrue(thrown);
-    }
-
-    @Test
-    public void emptyFileTest() {
-        File f = new File("temp.tmp");
-        try {
-            f.createNewFile();
-            RawDataReader dataReader = new RawDataReader();
-            f.deleteOnExit();
-            assertEquals(null, dataReader.readData(f.getPath()));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
+public class CorrectReadingTest {
     @Test
     public void correctReadTest() {
 
