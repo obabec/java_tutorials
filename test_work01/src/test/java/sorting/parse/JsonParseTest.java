@@ -6,38 +6,37 @@ import com.redhat.sorting.parse.JsonDataParser;
 import com.redhat.sorting.utils.Employee;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
 public class JsonParseTest {
 
     @Test
-    public void correctJsonParseTest() {
+    public void correctJsonParseTest() throws JsonProcessingException {
         JsonDataParser jsonDataParser = new JsonDataParser();
         Employee emp = new Employee();
         emp.setName("Irani");
         emp.setSurname("Romin");
         emp.setBirthDate(Date.valueOf("2012-03-11"));
+        ObjectMapper objectMapper = new ObjectMapper();
 
-        String jsonString = "{" +
-                "\"name\":\"Irani\"" +
-                "\"surname\":\"Romin\"" +
-                "\"birthDate\": \"2013-03-11\"" +
-                "}";
+        List listerino = new ArrayList();
+        listerino.add(objectMapper.writeValueAsString(emp));
 
-        byte[] jsonData = jsonString.getBytes();
-        assertEquals(emp,jsonDataParser.parseData(jsonData));
+
+        byte[] jsonData = objectMapper.writeValueAsString(emp).getBytes();
+        List<Employee> controllEmp = (List<Employee>) jsonDataParser.parseData(listerino);
+        assertEquals(emp.getName() + emp.getSurname(),controllEmp.get(0).getName() + controllEmp.get(0).getSurname());
 
     }
 
     @Test
     public void emptyByteTest() {
         JsonDataParser parser = new JsonDataParser();
-        byte[] bytes = null;
+        List bytes = null;
         assertEquals(null,parser.parseData(bytes));
     }
 }

@@ -15,7 +15,7 @@ public class SerializationSelectionTest {
         CommadLineParser cmdParser = new CommadLineParser();
         SerializatorSelectorImpl selector = new SerializatorSelectorImpl();
         cmdParser.setTypeOfContent("json");
-        assertEquals(new JsonSerializator(), selector.selectSelizator(cmdParser));
+        assertEquals(new JsonSerializator().getClass().getName(), selector.selectSelizator(cmdParser).getClass().getName());
     }
 
     @Test
@@ -23,7 +23,7 @@ public class SerializationSelectionTest {
         CommadLineParser cmdParser = new CommadLineParser();
         SerializatorSelectorImpl selector = new SerializatorSelectorImpl();
         cmdParser.setTypeOfContent("plain");
-        assertEquals(new PlainDataSerializator(), selector.selectSelizator(cmdParser));
+        assertEquals(new PlainDataSerializator().getClass().getName(), selector.selectSelizator(cmdParser).getClass().getName());
     }
 
 }

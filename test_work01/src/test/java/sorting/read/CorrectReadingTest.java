@@ -2,12 +2,13 @@ package sorting.read;
 
 import com.redhat.sorting.read.RawDataReader;
 import org.junit.Test;
-import sorting.DataStream;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -27,22 +28,17 @@ public class CorrectReadingTest {
         dataStream.createFile(collection);
 
         RawDataReader dataReader = new RawDataReader();
-        byte[] dataFromReader = new byte[0];
+        Collection dataFromReader = null;
 
         try {
-            dataFromReader = dataReader.readData(f.getPath());
-        } catch (IOException e) {
+            dataFromReader = new ArrayList (dataReader.readData(f.getPath()));
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
-        Collection controlCollection = new ArrayList();
+        assertEquals(collection, dataFromReader);
 
-        for (int i = 0; i < dataFromReader.length; i++) {
-            controlCollection.add(dataFromReader[i]);
 
-            assertEquals(collection, controlCollection);
-
-        }
 
         dataStream.destroyFilerino();
     }

@@ -1,4 +1,4 @@
-package sorting;
+package sorting.read;
 
 import com.redhat.data.PlainFileDataReader;
 import org.slf4j.Logger;

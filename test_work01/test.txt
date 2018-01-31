@@ -1,9 +1,5 @@
 [
-{
-"surname":"Romin",
-"name":"Irani",
-"birthDate": "2013-03-11"
-},
+{"surname":"Romin","name":"Irani","birthDate": "2013-03-11"},
 {
 "surname":"Romin",
 "name":"Tom",

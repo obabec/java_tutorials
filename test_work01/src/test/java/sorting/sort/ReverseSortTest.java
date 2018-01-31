@@ -18,7 +18,6 @@ public class ReverseSortTest {
         collection = collectionWorker.createCollectionForTest(collection);
         List controlList = new ArrayList(collection);
         Collections.sort(controlList);
-        Collections.reverse(controlList);
 
         for(int i = 0; i < 3; i++){
             assertEquals(controlList,collectionWorker.startSort(i,collection, Collections.reverseOrder()));

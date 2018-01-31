@@ -1,7 +1,8 @@
 package com.redhat.sorting.read;
 
 import java.io.IOException;
+import java.util.List;
 
 public interface DataReader {
-    byte[] readData(String filePath) throws IOException;
+    List readData(String filePath) throws IOException;
 }

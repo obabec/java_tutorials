@@ -2,7 +2,7 @@ package com.redhat.sorting.parse;
 
 import java.util.List;
 
-public interface DataParser {
+public interface DataParser<T extends Comparable<T>> {
 
-    List parseData(byte[] data);
+    List<T> parseData(List data);
 }

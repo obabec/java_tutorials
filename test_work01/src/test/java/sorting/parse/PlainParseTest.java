@@ -2,11 +2,7 @@ package sorting.parse;
 
 import com.redhat.sorting.parse.PlainDataParser;
 import org.junit.Test;
-import sorting.DataStream;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -23,16 +19,15 @@ public class PlainParseTest {
         c.add("!");
         List controlList = new ArrayList(c);
 
-        byte[] data = c.toArray().toString().getBytes();
         PlainDataParser plainDataParser = new PlainDataParser();
-        List parserOutputList = plainDataParser.parseData(data);
+        List parserOutputList = plainDataParser.parseData(controlList);
         assertEquals(controlList,parserOutputList);
     }
 
     @Test
     public void emptyByteTest() {
         PlainDataParser parser = new PlainDataParser();
-        byte[] bytes = null;
+        List bytes = null;
         assertEquals(null,parser.parseData(bytes));
     }
 }

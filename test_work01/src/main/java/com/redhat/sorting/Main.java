@@ -1,17 +1,20 @@
-package com.redhat;
+package com.redhat.sorting;
 
 import com.beust.jcommander.JCommander;
-import com.redhat.cmd.CommandLineSettings;
 import com.redhat.data.DataReader;
 import com.redhat.data.JsonFileDataReader;
 import com.redhat.data.PlainFileDataReader;
-import com.redhat.sorts.BasicSorter;
-import com.redhat.sorts.QuickSorter;
-import com.redhat.utils.Employee;
+import com.redhat.sorting.sort.DataSorter;
+import com.redhat.sorting.sort.QuickSorter;
+import com.redhat.sorting.utils.Employee;
+import com.redhat.sorting.cmd.CommadLineParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class Main {
 
@@ -22,15 +25,15 @@ public class Main {
 
         Collection numbersToSort;
 
-        BasicSorter sorter;
+        DataSorter sorter;
         sorter = new QuickSorter();
         LOGGER.info("Started main");
-        CommandLineSettings settings = new CommandLineSettings();
-        JCommander.newBuilder().addObject(settings).build().parse(args);
+        CommadLineParser cmdParser = new CommadLineParser();
+        JCommander.newBuilder().addObject(cmdParser).build().parse(args);
 
         DataReader fileDataReader;
 
-        if (settings.isTypeOfContent()) {
+        if (cmdParser.is) {
 
             LOGGER.info("Plain text sorting");
             fileDataReader = new PlainFileDataReader();

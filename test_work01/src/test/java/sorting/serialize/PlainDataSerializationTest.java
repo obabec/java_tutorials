@@ -1,11 +1,8 @@
 package sorting.serialize;
 
-import com.redhat.sorting.serialization.JsonSerializator;
 import com.redhat.sorting.serialization.PlainDataSerializator;
-import com.redhat.utils.Employee;
 import org.junit.Test;
 
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Collection;
 

@@ -2,6 +2,7 @@ package sorting.selection;
 
 import com.redhat.sorting.cmd.CommadLineParser;
 import com.redhat.sorting.parse.JsonDataParser;
+import com.redhat.sorting.parse.PlainDataParser;
 import com.redhat.sorting.selectors.parse.ParseSelectorImpl;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ public class ParserSelectionTest {
         cmdParser.setTypeOfContent("json");
         ParseSelectorImpl parserSelector = new ParseSelectorImpl();
 
-        assertEquals(new JsonDataParser(),parserSelector.selectParser(cmdParser));
+        assertEquals(new JsonDataParser().getClass().getName(),parserSelector.selectParser(cmdParser).getClass().getName());
     }
 
     @Test
@@ -24,7 +25,7 @@ public class ParserSelectionTest {
         cmdParser.setTypeOfContent("plain");
         ParseSelectorImpl parserSelector = new ParseSelectorImpl();
 
-        assertEquals(new JsonDataParser(),parserSelector.selectParser(cmdParser));
+        assertEquals(new PlainDataParser().getClass().getName(),parserSelector.selectParser(cmdParser).getClass().getName());
     }
 
 }
