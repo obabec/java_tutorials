@@ -22,9 +22,9 @@ public class SortSelectorImpl<T extends Comparable<T>> implements SortSelector {
         } else if (cmdParser.getAlgorithm() == "select") {
 
             switch (cmdParser.getDatatype()) {
-                case "string":  s = new SelectSorter<>();
+                case "string":  s = new SelectSorter<String>();
                     break;
-                case "int": s = new SelectSorter<>();
+                case "int": s = new SelectSorter<Integer>();
                     break;
                 default: throw new IllegalArgumentException();
             }
@@ -32,9 +32,9 @@ public class SortSelectorImpl<T extends Comparable<T>> implements SortSelector {
         } else if (cmdParser.getAlgorithm() == "insert") {
 
             switch (cmdParser.getDatatype()) {
-                case "string": s = new InsertSorter<>();
+                case "string": s = new InsertSorter<String>();
                     break;
-                case "int": s = new InsertSorter<>();
+                case "int": s = new InsertSorter<Integer>();
                     break;
                 default: throw new IllegalArgumentException();
             }
@@ -42,9 +42,9 @@ public class SortSelectorImpl<T extends Comparable<T>> implements SortSelector {
         } else if (cmdParser.getAlgorithm() == "quick") {
 
             switch (cmdParser.getDatatype()) {
-                case "string": s = new QuickSorter<>();
+                case "string": s = new QuickSorter<String>();
                     break;
-                case "int": s = new QuickSorter<>();
+                case "int": s = new QuickSorter<Integer>();
                     break;
                 default: throw new IllegalArgumentException();
             }
