@@ -1,12 +1,13 @@
 package sorting.read;
 
-import com.redhat.data.PlainFileDataReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 
 public class DataStream {
 
@@ -53,9 +54,19 @@ public class DataStream {
 
     public Collection initializeFile(){
 
-        PlainFileDataReader fileReader = new PlainFileDataReader();
-        Collection collectionData = fileReader.readData(filerino.getPath());
-        return collectionData;
+        List readedData = new ArrayList();
+        try (BufferedReader br = new BufferedReader(new FileReader(filerino.getPath()))){
+            String line = null;
+            while ((line = br.readLine()) != null){
+                readedData.add(line);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return readedData;
 
     }
 

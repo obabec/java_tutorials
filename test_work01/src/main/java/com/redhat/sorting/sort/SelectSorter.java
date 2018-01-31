@@ -35,11 +35,9 @@ public class SelectSorter<T extends Comparable<T>> implements DataSorter<T> {
                     mySortedList.set(number, swap);
                 }
             }
-        }
-        if (collection.isEmpty()) {
-            return null;
-        } else {
             return mySortedList;
+        } else {
+            return null;
         }
 
 

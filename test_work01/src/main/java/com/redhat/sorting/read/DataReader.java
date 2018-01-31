@@ -1,8 +1,9 @@
 package com.redhat.sorting.read;
 
-import java.io.IOException;
+import com.redhat.sorting.cmd.CommadLineParser;
+
 import java.util.List;
 
 public interface DataReader {
-    List readData(String filePath) throws IOException;
+    List readData(CommadLineParser cmdParser);
 }

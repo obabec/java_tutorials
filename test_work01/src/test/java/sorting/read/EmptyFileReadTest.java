@@ -1,5 +1,6 @@
 package sorting.read;
 
+import com.redhat.sorting.cmd.CommadLineParser;
 import com.redhat.sorting.read.RawDataReader;
 import org.junit.Test;
 
@@ -12,11 +13,13 @@ public class EmptyFileReadTest {
     @Test
     public void emptyFileTest() {
         File f = new File("temp.tmp");
+        CommadLineParser commadLineParser = new CommadLineParser();
         try {
             f.createNewFile();
             RawDataReader dataReader = new RawDataReader();
             f.deleteOnExit();
-            assertEquals(null, dataReader.readData(f.getPath()));
+            commadLineParser.setPath(f.getPath());
+            assertEquals(null, dataReader.readData(commadLineParser));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,20 +1,17 @@
 package com.redhat.sorting;
 
 import com.beust.jcommander.JCommander;
-import com.redhat.data.DataReader;
-import com.redhat.data.JsonFileDataReader;
-import com.redhat.data.PlainFileDataReader;
-import com.redhat.sorting.sort.DataSorter;
-import com.redhat.sorting.sort.QuickSorter;
-import com.redhat.sorting.utils.Employee;
 import com.redhat.sorting.cmd.CommadLineParser;
+import com.redhat.sorting.output.SortedDataWriter;
+import com.redhat.sorting.parse.DataParser;
+import com.redhat.sorting.read.RawDataReader;
+import com.redhat.sorting.selectors.parse.ParseSelectorImpl;
+import com.redhat.sorting.selectors.serialize.SerializatorSelectorImpl;
+import com.redhat.sorting.selectors.sort.SortSelectorImpl;
+import com.redhat.sorting.serialization.Serializator;
+import com.redhat.sorting.sort.DataSorter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
 
 public class Main {
 
@@ -23,38 +20,26 @@ public class Main {
     public static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
 
-        Collection numbersToSort;
+        CommadLineParser cmdSettings = new CommadLineParser();
+        JCommander.newBuilder().addObject(cmdSettings).build().parse(args);
 
-        DataSorter sorter;
-        sorter = new QuickSorter();
-        LOGGER.info("Started main");
-        CommadLineParser cmdParser = new CommadLineParser();
-        JCommander.newBuilder().addObject(cmdParser).build().parse(args);
+        RawDataReader dataReader = new RawDataReader();
+        ParseSelectorImpl parseSelector = new ParseSelectorImpl();
 
-        DataReader fileDataReader;
+        DataParser dataParser = parseSelector.selectParser(cmdSettings);
+        SortSelectorImpl sortSelector = new SortSelectorImpl();
+        DataSorter dataSorter = sortSelector.selectSorter(cmdSettings);
 
-        if (cmdParser.is) {
+        SerializatorSelectorImpl serializatorSelector = new SerializatorSelectorImpl();
+        Serializator dataSerializator = serializatorSelector.selectSelizator(cmdSettings);
 
-            LOGGER.info("Plain text sorting");
-            fileDataReader = new PlainFileDataReader();
-            numbersToSort = fileDataReader.readData(settings.getPath());
-            List sortedList = sorter.sort(numbersToSort, (settings.isSortOrder()?Collections.reverseOrder():null));
-            sortedList.forEach(System.out::println);
+        SortedDataWriter dataWriter = new SortedDataWriter();
 
-        } else {
-            LOGGER.info("JSON data sorting");
-            fileDataReader = new JsonFileDataReader();
-            numbersToSort = fileDataReader.readData(settings.getPath());
+        dataWriter.writeData( dataSerializator.serialize(dataSorter.sort(
+                dataParser.parseData(dataReader.readData(cmdSettings)))));
 
-            Comparator<Employee> c = new Comparator<Employee>() {
-                @Override
-                public int compare(Employee o1, Employee o2) {
-                    return o2.getBirthDate().compareTo(o1.getBirthDate());
-                }
-            };
 
-            List<Employee> sortedList = sorter.sort(numbersToSort,(settings.isSortOrder()?c.reversed():c));
-            sortedList.forEach(employee -> System.out.println(employee.getName() + " : " +employee.getBirthDate()));
-        }
+
+
     }
 }

@@ -8,10 +8,9 @@ import com.redhat.sorting.parse.PlainDataParser;
 public class ParseSelectorImpl implements ParseSelector {
     @Override
     public DataParser selectParser(CommadLineParser cmdParser) {
-
-        if (cmdParser.getTypeOfContent() == "json") {
+        if (cmdParser.getTypeOfContent().contains("json")) {
             return new JsonDataParser();
-        } else if (cmdParser.getTypeOfContent() == "plain") {
+        } else if (cmdParser.getTypeOfContent().contains("plain")) {
             return new PlainDataParser();
         } else {
             throw new IllegalArgumentException();

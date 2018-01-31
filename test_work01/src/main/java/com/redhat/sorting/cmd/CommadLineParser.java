@@ -4,9 +4,6 @@ import com.beust.jcommander.Parameter;
 
 public class CommadLineParser {
 
-    @Parameter(names = {"--order", "-o"}, description = "Json sorting")
-    private boolean sortOrder = false;
-
     @Parameter(names = {"--content", "-c"}, description = "Json sorting")
     private String typeOfContent = "plain";
 
@@ -16,16 +13,9 @@ public class CommadLineParser {
     @Parameter(names = {"--algorithm", "-a"}, required = true, description = "Select sorting algo")
     private String algorithm;
 
-    @Parameter(names = {"--datatype", "-d"}, required = true, description = "Select proper datatype")
-    private String datatype;
+    @Parameter(names = {"--datatype", "-d"}, description = "Select proper datatype")
+    private String datatype = "int";
 
-    public boolean isSortOrder() {
-        return sortOrder;
-    }
-
-    public void setSortOrder(boolean sortOrder) {
-        this.sortOrder = sortOrder;
-    }
 
     public String getTypeOfContent() {
         return typeOfContent;

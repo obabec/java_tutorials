@@ -9,49 +9,75 @@ public class SortSelectorImpl<T extends Comparable<T>> implements SortSelector {
 
         DataSorter s = null;
 
-        if (cmdParser.getAlgorithm() == "bubble") {
+        if (cmdParser.getAlgorithm().contains("bubble")) {
+               s = selectBubble(cmdParser);
 
-            switch (cmdParser.getDatatype()) {
-                case "string":  s = new BubbleSorter<String>();
-                    break;
-                case "int": s = new BubbleSorter<Integer>();
-                    break;
-                default: throw new IllegalArgumentException();
-            }
+        } else if (cmdParser.getAlgorithm().contains("select")) {
 
-        } else if (cmdParser.getAlgorithm() == "select") {
+                s = selectSelect(cmdParser);
 
-            switch (cmdParser.getDatatype()) {
-                case "string":  s = new SelectSorter<String>();
-                    break;
-                case "int": s = new SelectSorter<Integer>();
-                    break;
-                default: throw new IllegalArgumentException();
-            }
+        } else if (cmdParser.getAlgorithm().contains("insert")) {
 
-        } else if (cmdParser.getAlgorithm() == "insert") {
+                s = selectInsert(cmdParser);
 
-            switch (cmdParser.getDatatype()) {
-                case "string": s = new InsertSorter<String>();
-                    break;
-                case "int": s = new InsertSorter<Integer>();
-                    break;
-                default: throw new IllegalArgumentException();
-            }
+        } else if (cmdParser.getAlgorithm().contains("quick")) {
 
-        } else if (cmdParser.getAlgorithm() == "quick") {
-
-            switch (cmdParser.getDatatype()) {
-                case "string": s = new QuickSorter<String>();
-                    break;
-                case "int": s = new QuickSorter<Integer>();
-                    break;
-                default: throw new IllegalArgumentException();
-            }
-
+                s = selectQuick(cmdParser);
         } else {
             throw new IllegalArgumentException();
         }
         return s;
     }
+    public DataSorter selectBubble(CommadLineParser commadLineParser) {
+        DataSorter s = null;
+        switch (commadLineParser.getDatatype()) {
+            case "string":  s = new BubbleSorter<String>();
+                break;
+            case "int": s = new BubbleSorter<Integer>();
+                break;
+            default: throw new IllegalArgumentException();
+        }
+        return s;
+    }
+
+    public DataSorter selectSelect(CommadLineParser commadLineParser) {
+        DataSorter s = null;
+        switch (commadLineParser.getDatatype()) {
+            case "string":  s = new SelectSorter<String>();
+                break;
+            case "int": s = new SelectSorter<Integer>();
+                break;
+            default: throw new IllegalArgumentException();
+        }
+        return s;
+    }
+
+    public DataSorter selectInsert(CommadLineParser commadLineParser) {
+
+        switch (commadLineParser.getDatatype()) {
+            case "string": DataSorter<String> s = new InsertSorter<String>();
+                break;
+            case "int": DataSorter<Integer> s = new InsertSorter<Integer>();
+                break;
+            default: throw new IllegalArgumentException();
+        }
+        return s;
+    }
+
+    public DataSorter selectQuick(CommadLineParser commadLineParser) {
+        DataSorter s = null;
+        switch (commadLineParser.getDatatype()) {
+            case "string": s = new QuickSorter<String>();
+                break;
+            case "int": s = new QuickSorter<Integer>();
+                break;
+            default: throw new IllegalArgumentException();
+        }
+        return s;
+
+    }
+
+
+
+
 }

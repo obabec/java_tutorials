@@ -10,9 +10,9 @@ public class SerializatorSelectorImpl implements SerializatorSelector {
     @Override
     public Serializator selectSelizator(CommadLineParser commadLineParser) {
 
-        if (commadLineParser.getTypeOfContent() == "json") {
+        if (commadLineParser.getTypeOfContent().contains("json")) {
             return new JsonSerializator();
-        } else if (commadLineParser.getTypeOfContent() == "plain") {
+        } else if (commadLineParser.getTypeOfContent().contains("plain")) {
             return new PlainDataSerializator();
         } else {
             throw new IllegalArgumentException();

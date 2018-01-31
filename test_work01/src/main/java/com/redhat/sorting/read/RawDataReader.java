@@ -1,5 +1,7 @@
 package com.redhat.sorting.read;
 
+import com.redhat.sorting.cmd.CommadLineParser;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -9,10 +11,10 @@ import java.util.List;
 
 public class RawDataReader implements DataReader{
     @Override
-    public List readData(String filePath) throws FileNotFoundException {
+    public List readData(CommadLineParser commadLineParser) {
 
         List readedData = new ArrayList();
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))){
+        try (BufferedReader br = new BufferedReader(new FileReader(commadLineParser.getPath()))){
             String line = null;
             while ((line = br.readLine()) != null){
                 readedData.add(line);

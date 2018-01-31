@@ -13,8 +13,7 @@ public class JsonDataParser implements DataParser{
     @Override
     public List parseData(List data) {
 
-        if (data == null)
-        {
+        if (data == null) {
             return null;
         } else {
             String str = "";

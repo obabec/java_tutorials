@@ -24,7 +24,7 @@ public class JsonDataSerializationTest {
         emp.setBirthDate(Date.valueOf("2013-03-11"));
         Collection<Employee> collection = new ArrayList<>();
         collection.add(emp);
-        assertEquals(objectMapper.writeValueAsString(emp),jsonSerializator.serialize(collection));
+        assertEquals(objectMapper.writeValueAsString(collection),jsonSerializator.serialize(collection));
     }
 
     @Test

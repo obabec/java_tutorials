@@ -9,7 +9,7 @@ public class BubbleSorter<T extends Comparable<T>> implements DataSorter<T>{
     @Override
     public List<T> sort(Collection<T> collection, Comparator<T> comparator) {
 
-        List<T> mySortedList = (List<T>) collection.stream().collect(Collectors.toList());
+        List<T> mySortedList = collection.stream().collect(Collectors.toList());
         T transfer;
 
         for (int x = 0; x < mySortedList.size() - 1; x++) {

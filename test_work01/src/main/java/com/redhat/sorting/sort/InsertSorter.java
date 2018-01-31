@@ -7,7 +7,6 @@ public class InsertSorter<T extends Comparable<T>> implements DataSorter<T> {
     public List<T> sort(Collection<T> collection, Comparator<T> comparator) {
         List<T> mySortedList = new ArrayList<>();
         Iterator<T> integerIterator = collection.iterator();
-
         if (collection.isEmpty()) {
             return null;
         } else {

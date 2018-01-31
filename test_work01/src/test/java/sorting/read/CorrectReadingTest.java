@@ -1,5 +1,6 @@
 package sorting.read;
 
+import com.redhat.sorting.cmd.CommadLineParser;
 import com.redhat.sorting.read.RawDataReader;
 import org.junit.Test;
 
@@ -30,11 +31,11 @@ public class CorrectReadingTest {
         RawDataReader dataReader = new RawDataReader();
         Collection dataFromReader = null;
 
-        try {
-            dataFromReader = new ArrayList (dataReader.readData(f.getPath()));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        CommadLineParser commadLineParser = new CommadLineParser();
+        commadLineParser.setPath(f.getPath());
+
+        dataFromReader = new ArrayList (dataReader.readData(commadLineParser));
+
 
         assertEquals(collection, dataFromReader);
 
